@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>15-Minute Creamy Garlic Pasta</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("Pasta.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="emoji" id="title">🍝 15-Minute Creamy Garlic Pasta</h1>
+    <p id="desc">Your weeknight dinner hero — rich, garlicky, and ready before you can say "takeout"!</p>
+    <p><strong id="need">👨‍🍳 You’ll need:</strong></p>
+    <ul id="ingredients">
+      <li>200g pasta (any kind)</li>
+      <li>3–4 garlic cloves, minced</li>
+      <li>1 tbsp butter or olive oil</li>
+      <li>200ml heavy cream (or milk for lighter version)</li>
+      <li>Salt, pepper</li>
+      <li>Parmesan & parsley (optional, but yum!)</li>
+    </ul>
+
+    <p><strong id="how">📍 How to make it:</strong></p>
+    <ol id="steps">
+      <li>Boil pasta until al dente. Save ½ cup pasta water.</li>
+      <li>In a pan, melt butter → sauté garlic for 1–2 mins.</li>
+      <li>Add cream, salt & pepper. Simmer for 2–3 mins.</li>
+      <li>Add cooked pasta + splash of pasta water. Stir well.</li>
+      <li>Sprinkle cheese & herbs. Done!</li>
+    </ol>
+    <header>
+    <img src="logo.png" alt="Tasty & Lifehacky Logo"
+     style="width: 40%; display: block; margin: 0 auto;" />
+  </header>
+    <p class="emoji" id="save">✨ Save this creamy magic — your taste buds will cheer.</p>
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "🍝 Сливочная паста с чесноком за 15 минут",
+        desc: "Идеальный ужин на будний вечер — сливочный, чесночный и быстрее доставки!",
+        need: "👨‍🍳 Понадобится:",
+        how: "📍 Как готовить:",
+        ingredients: [
+          "200 г пасты (любая)",
+          "3–4 зубчика чеснока, измельчённые",
+          "1 ст.л. масла или оливкового масла",
+          "200 мл сливок (или молоко — для легкого варианта)",
+          "Соль, перец",
+          "Пармезан и петрушка (по желанию)"
+        ],
+        steps: [
+          "Отварите пасту до состояния аль денте. Оставьте ½ стакана воды.",
+          "Растопите масло на сковороде, обжарьте чеснок 1–2 мин.",
+          "Добавьте сливки, соль и перец. Потушите 2–3 мин.",
+          "Добавьте пасту и немного воды. Перемешайте.",
+          "Посыпьте сыром и зеленью. Готово!"
+        ],
+        save: "✨ Сохраните этот сливочный рецепт — ваши вкусовые рецепторы скажут спасибо!"
+      },
+      de: {
+        title: "🍝 Cremige Knoblauchpasta in 15 Minuten",
+        desc: "Dein Held fürs Abendessen – cremig, knoblauchlastig und schneller als Takeout!",
+        need: "👨‍🍳 Du brauchst:",
+        how: "📍 So geht's:",
+        ingredients: [
+          "200g Pasta (nach Wahl)",
+          "3–4 Knoblauchzehen, gehackt",
+          "1 EL Butter oder Olivenöl",
+          "200ml Sahne (oder Milch für leichter)",
+          "Salz, Pfeffer",
+          "Parmesan & Petersilie (optional)"
+        ],
+        steps: [
+          "Pasta al dente kochen. ½ Tasse Wasser aufbewahren.",
+          "Butter schmelzen → Knoblauch 1–2 Minuten anbraten.",
+          "Sahne, Salz & Pfeffer hinzufügen. 2–3 Minuten köcheln.",
+          "Pasta + etwas Wasser dazugeben. Gut umrühren.",
+          "Mit Käse & Kräutern bestreuen. Fertig!"
+        ],
+        save: "✨ Speichere dieses cremige Rezept – deine Geschmacksknospen werden jubeln!"
+      },
+      fr: {
+        title: "🍝 Pâtes crémeuses à l’ail en 15 min",
+        desc: "Ton héros du dîner — crémeux, aillé et prêt avant que tu dises « livraison » !",
+        need: "👨‍🍳 Il te faut :",
+        how: "📍 Préparation :",
+        ingredients: [
+          "200g de pâtes (au choix)",
+          "3–4 gousses d’ail, hachées",
+          "1 c. à s. de beurre ou huile d’olive",
+          "200ml de crème (ou lait pour version légère)",
+          "Sel, poivre",
+          "Parmesan & persil (facultatif)"
+        ],
+        steps: [
+          "Faire cuire les pâtes al dente. Garder ½ verre d’eau.",
+          "Faire fondre le beurre, faire revenir l’ail 1–2 min.",
+          "Ajouter crème, sel, poivre. Laisser mijoter 2–3 min.",
+          "Ajouter les pâtes + eau. Bien mélanger.",
+          "Parsemer de fromage et herbes. C’est prêt !"
+        ],
+        save: "✨ Garde cette magie crémeuse — tes papilles vont adorer."
+      },
+      es: {
+        title: "🍝 Pasta cremosa con ajo en 15 minutos",
+        desc: "Tu héroe de cena entre semana — rica, con ajo y lista antes que el delivery.",
+        need: "👨‍🍳 Necesitas:",
+        how: "📍 Preparación:",
+        ingredients: [
+          "200g de pasta (la que tengas)",
+          "3–4 dientes de ajo, picados",
+          "1 cda de mantequilla o aceite",
+          "200ml de crema o leche",
+          "Sal, pimienta",
+          "Parmesano y perejil (opcional)"
+        ],
+        steps: [
+          "Cocer la pasta al dente. Reserva ½ taza de agua.",
+          "Derretir mantequilla y sofreír ajo 1–2 min.",
+          "Agregar crema, sal y pimienta. Cocinar 2–3 min.",
+          "Añadir pasta y agua. Mezclar bien.",
+          "Espolvorea queso y hierbas. ¡Listo!"
+        ],
+        save: "✨ Guarda esta delicia cremosa — tu paladar lo agradecerá."
+      },
+      it: {
+        title: "🍝 Pasta cremosa all’aglio in 15 minuti",
+        desc: "Il tuo salvatore della cena — ricca, all’aglio e pronta prima dell’asporto!",
+        need: "👨‍🍳 Ti serve:",
+        how: "📍 Procedimento:",
+        ingredients: [
+          "200g di pasta (qualsiasi tipo)",
+          "3–4 spicchi d’aglio tritati",
+          "1 cucchiaio di burro o olio",
+          "200ml di panna o latte",
+          "Sale, pepe",
+          "Parmigiano & prezzemolo (facoltativo)"
+        ],
+        steps: [
+          "Cuoci la pasta al dente. Tieni ½ tazza d’acqua.",
+          "Sciogli il burro e soffriggi l’aglio 1–2 min.",
+          "Aggiungi panna, sale e pepe. Cuoci 2–3 min.",
+          "Unisci pasta e acqua. Mescola bene.",
+          "Cospargi con formaggio ed erbe. Fatto!"
+        ],
+        save: "✨ Salva questa magia cremosa — le tue papille ti ringrazieranno."
+      },
+      pt: {
+        title: "🍝 Massa cremosa de alho em 15 minutos",
+        desc: "Seu herói do jantar — cremoso, com alho e mais rápido que delivery!",
+        need: "👨‍🍳 Você vai precisar de:",
+        how: "📍 Como fazer:",
+        ingredients: [
+          "200g de macarrão (qualquer tipo)",
+          "3–4 dentes de alho picados",
+          "1 colher de sopa de manteiga ou azeite",
+          "200ml de creme de leite (ou leite)",
+          "Sal, pimenta",
+          "Parmesão e salsa (opcional)"
+        ],
+        steps: [
+          "Cozinhe o macarrão al dente. Reserve ½ xícara da água.",
+          "Derreta a manteiga → refogue o alho por 1–2 min.",
+          "Adicione creme, sal e pimenta. Cozinhe por 2–3 min.",
+          "Adicione o macarrão + água. Misture bem.",
+          "Polvilhe queijo e ervas. Pronto!"
+        ],
+        save: "✨ Salve essa mágica cremosa — seu paladar vai amar."
+      },
+      ja: {
+        title: "🍝 クリーミーガーリックパスタ（15分）",
+        desc: "平日の夜の救世主！濃厚でガーリック感たっぷり、出前より早い！",
+        need: "👨‍🍳 用意するもの：",
+        how: "📍 作り方：",
+        ingredients: [
+          "パスタ 200g（種類はお好みで）",
+          "にんにく 3～4片（みじん切り）",
+          "バターまたはオリーブオイル 大さじ1",
+          "生クリーム 200ml（または牛乳）",
+          "塩、こしょう",
+          "パルメザンチーズとパセリ（お好みで）"
+        ],
+        steps: [
+          "パスタをアルデンテに茹で、茹で汁½カップを取っておく。",
+          "バターを溶かし、にんにくを1～2分炒める。",
+          "クリーム、塩、こしょうを加えて2～3分煮る。",
+          "パスタと茹で汁を加えて混ぜる。",
+          "チーズとハーブをふりかけて完成！"
+        ],
+        save: "✨ このクリーミーな魔法を保存しておこう — きっとまた食べたくなるよ！"
+      },
+      ko: {
+        title: "🍝 15분 크리미 갈릭 파스타",
+        desc: "평일 저녁의 영웅 — 풍미 가득한 마늘 크림 파스타, 배달보다 빠르게!",
+        need: "👨‍🍳 준비물:",
+        how: "📍 만드는 법:",
+        ingredients: [
+          "파스타 200g (아무 종류나)",
+          "다진 마늘 3~4쪽",
+          "버터 또는 올리브유 1큰술",
+          "생크림 200ml (또는 우유)",
+          "소금, 후추",
+          "파마산 치즈와 파슬리 (선택사항)"
+        ],
+        steps: [
+          "파스타를 알단테로 삶고 물 ½컵 남긴다.",
+          "팬에 버터 녹이고 마늘을 1~2분 볶는다.",
+          "크림, 소금, 후추 넣고 2~3분 끓인다.",
+          "파스타와 물을 넣고 잘 섞는다.",
+          "치즈와 허브를 뿌려서 완성!"
+        ],
+        save: "✨ 이 크리미한 마법을 저장하세요 — 입이 즐거워질 거예요!"
+      },
+      zh: {
+        title: "🍝 奶油蒜香意面（15分钟）",
+        desc: "你工作日的晚餐英雄——浓郁蒜香，比外卖还快！",
+        need: "👨‍🍳 你需要准备：",
+        how: "📍 做法：",
+        ingredients: [
+          "200g 意面（任意种类）",
+          "3–4瓣大蒜，切碎",
+          "1汤匙黄油或橄榄油",
+          "200ml 奶油（或牛奶）",
+          "盐、胡椒",
+          "帕玛森芝士和香菜（可选）"
+        ],
+        steps: [
+          "将意面煮至略硬，保留 ½ 杯面水。",
+          "锅中融化黄油，炒蒜 1–2 分钟。",
+          "加入奶油、盐和胡椒，煮 2–3 分钟。",
+          "倒入意面和一点面水，搅拌均匀。",
+          "撒上芝士和香草，完成！"
+        ],
+        save: "✨ 保存这道奶油神作，你的味蕾会感谢你！"
+      }
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    if (translations[lang]) {
+      const t = translations[lang];
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("desc").textContent = t.desc;
+      document.getElementById("need").textContent = t.need;
+      document.getElementById("how").textContent = t.how;
+      document.getElementById("save").textContent = t.save;
+      document.getElementById("ingredients").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("steps").innerHTML = t.steps.map(s => `<li>${s}</li>`).join("");
+    }
+  </script>
+</body>
+</html>

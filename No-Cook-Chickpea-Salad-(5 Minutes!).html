@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>No-Cook Chickpea Salad (5 Minutes!)</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("Chickpea-Salad.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="emoji" id="title">🥗 No-Cook Chickpea Salad (5 Minutes!)</h1>
+    <p id="desc">🕐 Prep Time: 5 minutes<br>🍽 Servings: 2–3<br>🔥 Cooking: None!</p>
+  <header>
+    <img src="logoSalad.png" alt="Tasty & Lifehacky Logo"
+     style="width: 50%; display: block; margin: 0 auto;" />
+  </header>
+    <p><strong id="need">✅ Ingredients:</strong></p>
+    <ul id="ingredients">
+      <li>1 can (15 oz / 400 g) chickpeas, drained & rinsed</li>
+      <li>1 small cucumber, diced</li>
+      <li>10 cherry tomatoes, halved</li>
+      <li>¼ red onion, finely chopped</li>
+      <li>2 tbsp olive oil</li>
+      <li>1 tbsp lemon juice (freshly squeezed preferred)</li>
+      <li>Salt & pepper to taste</li>
+      <li>Optional: chopped fresh parsley or mint for garnish</li>
+    </ul>
+
+    <p><strong id="how">🥣 Instructions:</strong></p>
+    <ol id="steps">
+      <li>In a medium bowl, combine chickpeas, diced cucumber, tomatoes, and red onion.</li>
+      <li>Drizzle with olive oil and lemon juice.</li>
+      <li>Season with salt and pepper to taste.</li>
+      <li>Toss everything gently until evenly coated.</li>
+      <li>Optional: sprinkle fresh herbs on top.</li>
+      <li>Serve immediately or let sit in the fridge for 10–15 min for flavors to meld.</li>
+    </ol>
+
+    <p class="emoji" id="tips">💡 Tips:<br>Add feta cheese or avocado for a richer version.<br>Works great as a filling for pita pockets or wraps.<br>Best served chilled on hot days!</p>
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "🥗 Нутовый салат без готовки (5 минут!)",
+        desc: "🕐 Время подготовки: 5 минут<br>🍽 Порции: 2–3<br>🔥 Готовка: не требуется!",
+        need: "✅ Ингредиенты:",
+        how: "🥣 Инструкции:",
+        tips: "💡 Советы:<br>Добавьте фету или авокадо для сытности.<br>Идеально в питу или лаваш.<br>Лучше всего охлаждённым в жаркую погоду!",
+        ingredients: [
+          "1 банка (400 г) нута, промыть и обсушить",
+          "1 небольшой огурец, нарезанный кубиками",
+          "10 черри, разрезанных пополам",
+          "¼ красного лука, мелко нарезанного",
+          "2 ст.л. оливкового масла",
+          "1 ст.л. лимонного сока (лучше свежего)",
+          "Соль и перец по вкусу",
+          "По желанию: петрушка или мята для украшения"
+        ],
+        steps: [
+          "Смешайте нут, огурец, помидоры и лук в миске.",
+          "Полейте оливковым маслом и лимонным соком.",
+          "Добавьте соль и перец по вкусу.",
+          "Аккуратно перемешайте до равномерного покрытия.",
+          "По желанию — посыпьте зеленью.",
+          "Подавайте сразу или охладите 10–15 мин."
+        ],
+		de: {
+  title: "🥗 Kichererbsensalat ohne Kochen (5 Minuten!)",
+  desc: "🕐 Zubereitungszeit: 5 Minuten<br>🍽 Portionen: 2–3<br>🔥 Kochen: Nicht nötig!",
+  need: "✅ Zutaten:",
+  how: "🥣 Anleitung:",
+  tips: "💡 Tipps:<br>Feta oder Avocado für mehr Geschmack.<br>Perfekt als Füllung für Pita oder Wraps.<br>Am besten gekühlt servieren!",
+  ingredients: [
+    "1 Dose (400 g) Kichererbsen, gespült & abgetropft",
+    "1 kleine Gurke, gewürfelt",
+    "10 Cherrytomaten, halbiert",
+    "¼ rote Zwiebel, fein gehackt",
+    "2 EL Olivenöl",
+    "1 EL Zitronensaft (frisch gepresst bevorzugt)",
+    "Salz & Pfeffer nach Geschmack",
+    "Optional: gehackte Petersilie oder Minze zum Garnieren"
+  ],
+  steps: [
+    "Kichererbsen, Gurke, Tomaten und Zwiebel in einer Schüssel vermengen.",
+    "Mit Olivenöl und Zitronensaft beträufeln.",
+    "Mit Salz und Pfeffer würzen.",
+    "Alles vorsichtig vermengen.",
+    "Optional: frische Kräuter darüberstreuen.",
+    "Sofort servieren oder 10–15 Min. kalt stellen."
+  ]
+},
+fr: {
+  title: "🥗 Salade de pois chiches sans cuisson (5 minutes !)",
+  desc: "🕐 Préparation : 5 minutes<br>🍽 Portions : 2–3<br>🔥 Cuisson : Aucune !",
+  need: "✅ Ingrédients :",
+  how: "🥣 Instructions :",
+  tips: "💡 Astuces :<br>Ajoutez de la feta ou de l’avocat pour plus de gourmandise.<br>Parfait dans une pita ou un wrap.<br>Idéal frais pour les journées chaudes !",
+  ingredients: [
+    "1 boîte (400 g) de pois chiches, rincés et égouttés",
+    "1 petit concombre, coupé en dés",
+    "10 tomates cerises, coupées en deux",
+    "¼ d’oignon rouge, finement haché",
+    "2 c. à s. d’huile d’olive",
+    "1 c. à s. de jus de citron (de préférence frais)",
+    "Sel & poivre selon le goût",
+    "Facultatif : persil ou menthe fraîche hachée pour la garniture"
+  ],
+  steps: [
+    "Mélangez pois chiches, concombre, tomates et oignon dans un bol.",
+    "Arrosez d’huile d’olive et de jus de citron.",
+    "Salez et poivrez selon le goût.",
+    "Mélangez délicatement le tout.",
+    "Ajoutez les herbes fraîches si vous le souhaitez.",
+    "Servez immédiatement ou réfrigérez 10–15 min."
+  ]
+},
+es: {
+  title: "🥗 Ensalada de garbanzos sin cocción (¡5 minutos!)",
+  desc: "🕐 Tiempo de preparación: 5 minutos<br>🍽 Porciones: 2–3<br>🔥 Cocinar: ¡Nada!",
+  need: "✅ Ingredientes:",
+  how: "🥣 Instrucciones:",
+  tips: "💡 Consejos:<br>Agrega queso feta o aguacate para una versión más rica.<br>Ideal para rellenar pan pita o wraps.<br>¡Mejor servido frío en días calurosos!",
+  ingredients: [
+    "1 lata (400 g) de garbanzos, escurridos y enjuagados",
+    "1 pepino pequeño, picado",
+    "10 tomates cherry, cortados a la mitad",
+    "¼ de cebolla roja, finamente picada",
+    "2 cucharadas de aceite de oliva",
+    "1 cucharada de jugo de limón (preferentemente fresco)",
+    "Sal y pimienta al gusto",
+    "Opcional: perejil o menta fresca picada para decorar"
+  ],
+  steps: [
+    "Mezcla los garbanzos, pepino, tomates y cebolla en un bol.",
+    "Agrega el aceite de oliva y jugo de limón.",
+    "Sazona con sal y pimienta al gusto.",
+    "Revuelve suavemente para mezclar.",
+    "Opcional: espolvorea hierbas frescas encima.",
+    "Servir inmediatamente o refrigerar 10–15 min."
+  ]
+},
+it: {
+  title: "🥗 Insalata di ceci senza cottura (5 minuti!)",
+  desc: "🕐 Tempo di preparazione: 5 minuti<br>🍽 Porzioni: 2–3<br>🔥 Cottura: Nessuna!",
+  need: "✅ Ingredienti:",
+  how: "🥣 Istruzioni:",
+  tips: "💡 Consigli:<br>Aggiungi feta o avocado per una versione più ricca.<br>Perfetta in tasche di pita o wrap.<br>Meglio servita fredda nelle giornate calde!",
+  ingredients: [
+    "1 lattina (400 g) di ceci, scolati e risciacquati",
+    "1 cetriolo piccolo, a cubetti",
+    "10 pomodorini, tagliati a metà",
+    "¼ di cipolla rossa, tritata finemente",
+    "2 cucchiai di olio d'oliva",
+    "1 cucchiaio di succo di limone (meglio se fresco)",
+    "Sale e pepe a piacere",
+    "Facoltativo: prezzemolo o menta tritata per guarnire"
+  ],
+  steps: [
+    "Unisci ceci, cetriolo, pomodorini e cipolla in una ciotola.",
+    "Condisci con olio d’oliva e succo di limone.",
+    "Aggiungi sale e pepe a piacere.",
+    "Mescola delicatamente il tutto.",
+    "Aggiungi erbe fresche se desiderato.",
+    "Servi subito o lascia in frigo per 10–15 minuti."
+  ]
+},
+pt: {
+  title: "🥗 Salada de grão-de-bico sem cozimento (5 minutos!)",
+  desc: "🕐 Tempo de preparo: 5 minutos<br>🍽 Porções: 2–3<br>🔥 Cozimento: Nenhum!",
+  need: "✅ Ingredientes:",
+  how: "🥣 Instruções:",
+  tips: "💡 Dicas:<br>Adicione queijo feta ou abacate para uma versão mais rica.<br>Excelente como recheio de pita ou wraps.<br>Melhor servida gelada em dias quentes!",
+  ingredients: [
+    "1 lata (400 g) de grão-de-bico, lavado e escorrido",
+    "1 pepino pequeno, picado",
+    "10 tomates cereja, cortados ao meio",
+    "¼ de cebola roxa, picadinha",
+    "2 colheres de sopa de azeite de oliva",
+    "1 colher de sopa de suco de limão (de preferência fresco)",
+    "Sal e pimenta a gosto",
+    "Opcional: salsinha ou hortelã picada para decorar"
+  ],
+  steps: [
+    "Misture o grão-de-bico, pepino, tomate e cebola em uma tigela.",
+    "Regue com azeite e suco de limão.",
+    "Tempere com sal e pimenta a gosto.",
+    "Misture delicadamente.",
+    "Polvilhe ervas frescas, se desejar.",
+    "Sirva imediatamente ou leve à geladeira por 10–15 minutos."
+  ]
+},
+ja: {
+  title: "🥗 火を使わないひよこ豆サラダ（5分）",
+  desc: "🕐 調理時間: 5分<br>🍽 分量: 2～3人分<br>🔥 加熱: 不要！",
+  need: "✅ 材料:",
+  how: "🥣 作り方:",
+  tips: "💡 コツ:<br>フェタチーズやアボカドを加えると濃厚に。<br>ピタサンドやラップの具材にもぴったり。<br>暑い日は冷やしてどうぞ！",
+  ingredients: [
+    "ひよこ豆 1缶（400g）、水切り・洗浄済み",
+    "きゅうり 小1本、角切り",
+    "ミニトマト 10個、半分にカット",
+    "赤玉ねぎ 1/4個、みじん切り",
+    "オリーブオイル 大さじ2",
+    "レモン汁 大さじ1（できれば絞りたて）",
+    "塩・こしょう 適量",
+    "お好みで：刻んだパセリまたはミント"
+  ],
+  steps: [
+    "中サイズのボウルにひよこ豆、きゅうり、トマト、玉ねぎを入れる。",
+    "オリーブオイルとレモン汁をかける。",
+    "塩こしょうで味を調える。",
+    "全体をやさしく混ぜる。",
+    "お好みでハーブを散らす。",
+    "すぐに食べるか冷蔵庫で10～15分冷やす。"
+  ]
+},
+ko: {
+  title: "🥗 조리 없이 완성! 병아리콩 샐러드 (5분)",
+  desc: "🕐 준비 시간: 5분<br>🍽 인분: 2–3<br>🔥 조리: 필요 없음!",
+  need: "✅ 재료:",
+  how: "🥣 만드는 방법:",
+  tips: "💡 팁:<br>페타 치즈나 아보카도를 추가하면 더 고소해요.<br>피타나 랩 샌드위치 속재료로도 좋아요.<br>더운 날엔 차갑게 먹는 게 최고!",
+  ingredients: [
+    "병아리콩 1캔 (400g), 헹궈서 물기 제거",
+    "오이 1개, 깍둑썰기",
+    "방울토마토 10개, 반으로 자르기",
+    "적양파 ¼개, 잘게 다지기",
+    "올리브유 2큰술",
+    "레몬즙 1큰술 (가능하면 생즙)",
+    "소금 & 후추 약간",
+    "선택사항: 다진 파슬리나 민트"
+  ],
+  steps: [
+    "중간 크기 볼에 모든 재료 넣기.",
+    "올리브유와 레몬즙을 뿌린다.",
+    "소금, 후추로 간을 맞춘다.",
+    "부드럽게 섞는다.",
+    "허브를 뿌려 마무리 (선택사항).",
+    "바로 먹거나 냉장 보관 후 10–15분 후 먹기."
+  ]
+},
+zh: {
+  title: "🥗 免煮鹰嘴豆沙拉（5分钟）",
+  desc: "🕐 准备时间：5分钟<br>🍽 份量：2–3人<br>🔥 烹饪：无需！",
+  need: "✅ 食材：",
+  how: "🥣 做法：",
+  tips: "💡 小贴士：<br>加入羊奶酪或牛油果更丰盛。<br>可作为皮塔饼或卷饼的内馅。<br>炎热天气下冰镇后食用风味更佳！",
+  ingredients: [
+    "1罐（400克）鹰嘴豆，沥干冲洗",
+    "1根小黄瓜，切丁",
+    "10个樱桃番茄，对半切",
+    "¼个红洋葱，切碎",
+    "2汤匙橄榄油",
+    "1汤匙柠檬汁（最好现榨）",
+    "适量盐和黑胡椒",
+    "可选：切碎的新鲜香菜或薄荷装饰"
+  ],
+  steps: [
+    "将鹰嘴豆、黄瓜、番茄和洋葱放入碗中混合。",
+    "淋上橄榄油和柠檬汁。",
+    "加入盐和胡椒调味。",
+    "轻轻拌匀使其均匀包裹。",
+    "可选：撒上香草装饰。",
+    "可立即食用，也可冷藏10–15分钟让味道融合。"
+  ]
+}
+
+      },
+	  de: {
+  title: "🥗 Kichererbsensalat ohne Kochen (5 Minuten!)",
+  desc: "🕐 Zubereitungszeit: 5 Minuten<br>🍽 Portionen: 2–3<br>🔥 Kochen: Nicht nötig!",
+  need: "✅ Zutaten:",
+  how: "🥣 Anleitung:",
+  tips: "💡 Tipps:<br>Feta oder Avocado für mehr Geschmack.<br>Perfekt als Füllung für Pita oder Wraps.<br>Am besten gekühlt servieren!",
+  ingredients: [
+    "1 Dose (400 g) Kichererbsen, gespült & abgetropft",
+    "1 kleine Gurke, gewürfelt",
+    "10 Cherrytomaten, halbiert",
+    "¼ rote Zwiebel, fein gehackt",
+    "2 EL Olivenöl",
+    "1 EL Zitronensaft (frisch gepresst bevorzugt)",
+    "Salz & Pfeffer nach Geschmack",
+    "Optional: gehackte Petersilie oder Minze zum Garnieren"
+  ],
+  steps: [
+    "Kichererbsen, Gurke, Tomaten und Zwiebel in einer Schüssel vermengen.",
+    "Mit Olivenöl und Zitronensaft beträufeln.",
+    "Mit Salz und Pfeffer würzen.",
+    "Alles vorsichtig vermengen.",
+    "Optional: frische Kräuter darüberstreuen.",
+    "Sofort servieren oder 10–15 Min. kalt stellen."
+  ]
+},
+fr: {
+  title: "🥗 Salade de pois chiches sans cuisson (5 minutes !)",
+  desc: "🕐 Préparation : 5 minutes<br>🍽 Portions : 2–3<br>🔥 Cuisson : Aucune !",
+  need: "✅ Ingrédients :",
+  how: "🥣 Instructions :",
+  tips: "💡 Astuces :<br>Ajoutez de la feta ou de l’avocat pour plus de gourmandise.<br>Parfait dans une pita ou un wrap.<br>Idéal frais pour les journées chaudes !",
+  ingredients: [
+    "1 boîte (400 g) de pois chiches, rincés et égouttés",
+    "1 petit concombre, coupé en dés",
+    "10 tomates cerises, coupées en deux",
+    "¼ d’oignon rouge, finement haché",
+    "2 c. à s. d’huile d’olive",
+    "1 c. à s. de jus de citron (de préférence frais)",
+    "Sel & poivre selon le goût",
+    "Facultatif : persil ou menthe fraîche hachée pour la garniture"
+  ],
+  steps: [
+    "Mélangez pois chiches, concombre, tomates et oignon dans un bol.",
+    "Arrosez d’huile d’olive et de jus de citron.",
+    "Salez et poivrez selon le goût.",
+    "Mélangez délicatement le tout.",
+    "Ajoutez les herbes fraîches si vous le souhaitez.",
+    "Servez immédiatement ou réfrigérez 10–15 min."
+  ]
+},
+es: {
+  title: "🥗 Ensalada de garbanzos sin cocción (¡5 minutos!)",
+  desc: "🕐 Tiempo de preparación: 5 minutos<br>🍽 Porciones: 2–3<br>🔥 Cocinar: ¡Nada!",
+  need: "✅ Ingredientes:",
+  how: "🥣 Instrucciones:",
+  tips: "💡 Consejos:<br>Agrega queso feta o aguacate para una versión más rica.<br>Ideal para rellenar pan pita o wraps.<br>¡Mejor servido frío en días calurosos!",
+  ingredients: [
+    "1 lata (400 g) de garbanzos, escurridos y enjuagados",
+    "1 pepino pequeño, picado",
+    "10 tomates cherry, cortados a la mitad",
+    "¼ de cebolla roja, finamente picada",
+    "2 cucharadas de aceite de oliva",
+    "1 cucharada de jugo de limón (preferentemente fresco)",
+    "Sal y pimienta al gusto",
+    "Opcional: perejil o menta fresca picada para decorar"
+  ],
+  steps: [
+    "Mezcla los garbanzos, pepino, tomates y cebolla en un bol.",
+    "Agrega el aceite de oliva y jugo de limón.",
+    "Sazona con sal y pimienta al gusto.",
+    "Revuelve suavemente para mezclar.",
+    "Opcional: espolvorea hierbas frescas encima.",
+    "Servir inmediatamente o refrigerar 10–15 min."
+  ]
+},
+it: {
+  title: "🥗 Insalata di ceci senza cottura (5 minuti!)",
+  desc: "🕐 Tempo di preparazione: 5 minuti<br>🍽 Porzioni: 2–3<br>🔥 Cottura: Nessuna!",
+  need: "✅ Ingredienti:",
+  how: "🥣 Istruzioni:",
+  tips: "💡 Consigli:<br>Aggiungi feta o avocado per una versione più ricca.<br>Perfetta in tasche di pita o wrap.<br>Meglio servita fredda nelle giornate calde!",
+  ingredients: [
+    "1 lattina (400 g) di ceci, scolati e risciacquati",
+    "1 cetriolo piccolo, a cubetti",
+    "10 pomodorini, tagliati a metà",
+    "¼ di cipolla rossa, tritata finemente",
+    "2 cucchiai di olio d'oliva",
+    "1 cucchiaio di succo di limone (meglio se fresco)",
+    "Sale e pepe a piacere",
+    "Facoltativo: prezzemolo o menta tritata per guarnire"
+  ],
+  steps: [
+    "Unisci ceci, cetriolo, pomodorini e cipolla in una ciotola.",
+    "Condisci con olio d’oliva e succo di limone.",
+    "Aggiungi sale e pepe a piacere.",
+    "Mescola delicatamente il tutto.",
+    "Aggiungi erbe fresche se desiderato.",
+    "Servi subito o lascia in frigo per 10–15 minuti."
+  ]
+},
+pt: {
+  title: "🥗 Salada de grão-de-bico sem cozimento (5 minutos!)",
+  desc: "🕐 Tempo de preparo: 5 minutos<br>🍽 Porções: 2–3<br>🔥 Cozimento: Nenhum!",
+  need: "✅ Ingredientes:",
+  how: "🥣 Instruções:",
+  tips: "💡 Dicas:<br>Adicione queijo feta ou abacate para uma versão mais rica.<br>Excelente como recheio de pita ou wraps.<br>Melhor servida gelada em dias quentes!",
+  ingredients: [
+    "1 lata (400 g) de grão-de-bico, lavado e escorrido",
+    "1 pepino pequeno, picado",
+    "10 tomates cereja, cortados ao meio",
+    "¼ de cebola roxa, picadinha",
+    "2 colheres de sopa de azeite de oliva",
+    "1 colher de sopa de suco de limão (de preferência fresco)",
+    "Sal e pimenta a gosto",
+    "Opcional: salsinha ou hortelã picada para decorar"
+  ],
+  steps: [
+    "Misture o grão-de-bico, pepino, tomate e cebola em uma tigela.",
+    "Regue com azeite e suco de limão.",
+    "Tempere com sal e pimenta a gosto.",
+    "Misture delicadamente.",
+    "Polvilhe ervas frescas, se desejar.",
+    "Sirva imediatamente ou leve à geladeira por 10–15 minutos."
+  ]
+},
+ja: {
+  title: "🥗 火を使わないひよこ豆サラダ（5分）",
+  desc: "🕐 調理時間: 5分<br>🍽 分量: 2～3人分<br>🔥 加熱: 不要！",
+  need: "✅ 材料:",
+  how: "🥣 作り方:",
+  tips: "💡 コツ:<br>フェタチーズやアボカドを加えると濃厚に。<br>ピタサンドやラップの具材にもぴったり。<br>暑い日は冷やしてどうぞ！",
+  ingredients: [
+    "ひよこ豆 1缶（400g）、水切り・洗浄済み",
+    "きゅうり 小1本、角切り",
+    "ミニトマト 10個、半分にカット",
+    "赤玉ねぎ 1/4個、みじん切り",
+    "オリーブオイル 大さじ2",
+    "レモン汁 大さじ1（できれば絞りたて）",
+    "塩・こしょう 適量",
+    "お好みで：刻んだパセリまたはミント"
+  ],
+  steps: [
+    "中サイズのボウルにひよこ豆、きゅうり、トマト、玉ねぎを入れる。",
+    "オリーブオイルとレモン汁をかける。",
+    "塩こしょうで味を調える。",
+    "全体をやさしく混ぜる。",
+    "お好みでハーブを散らす。",
+    "すぐに食べるか冷蔵庫で10～15分冷やす。"
+  ]
+},
+ko: {
+  title: "🥗 조리 없이 완성! 병아리콩 샐러드 (5분)",
+  desc: "🕐 준비 시간: 5분<br>🍽 인분: 2–3<br>🔥 조리: 필요 없음!",
+  need: "✅ 재료:",
+  how: "🥣 만드는 방법:",
+  tips: "💡 팁:<br>페타 치즈나 아보카도를 추가하면 더 고소해요.<br>피타나 랩 샌드위치 속재료로도 좋아요.<br>더운 날엔 차갑게 먹는 게 최고!",
+  ingredients: [
+    "병아리콩 1캔 (400g), 헹궈서 물기 제거",
+    "오이 1개, 깍둑썰기",
+    "방울토마토 10개, 반으로 자르기",
+    "적양파 ¼개, 잘게 다지기",
+    "올리브유 2큰술",
+    "레몬즙 1큰술 (가능하면 생즙)",
+    "소금 & 후추 약간",
+    "선택사항: 다진 파슬리나 민트"
+  ],
+  steps: [
+    "중간 크기 볼에 모든 재료 넣기.",
+    "올리브유와 레몬즙을 뿌린다.",
+    "소금, 후추로 간을 맞춘다.",
+    "부드럽게 섞는다.",
+    "허브를 뿌려 마무리 (선택사항).",
+    "바로 먹거나 냉장 보관 후 10–15분 후 먹기."
+  ]
+},
+zh: {
+  title: "🥗 免煮鹰嘴豆沙拉（5分钟）",
+  desc: "🕐 准备时间：5分钟<br>🍽 份量：2–3人<br>🔥 烹饪：无需！",
+  need: "✅ 食材：",
+  how: "🥣 做法：",
+  tips: "💡 小贴士：<br>加入羊奶酪或牛油果更丰盛。<br>可作为皮塔饼或卷饼的内馅。<br>炎热天气下冰镇后食用风味更佳！",
+  ingredients: [
+    "1罐（400克）鹰嘴豆，沥干冲洗",
+    "1根小黄瓜，切丁",
+    "10个樱桃番茄，对半切",
+    "¼个红洋葱，切碎",
+    "2汤匙橄榄油",
+    "1汤匙柠檬汁（最好现榨）",
+    "适量盐和黑胡椒",
+    "可选：切碎的新鲜香菜或薄荷装饰"
+  ],
+  steps: [
+    "将鹰嘴豆、黄瓜、番茄和洋葱放入碗中混合。",
+    "淋上橄榄油和柠檬汁。",
+    "加入盐和胡椒调味。",
+    "轻轻拌匀使其均匀包裹。",
+    "可选：撒上香草装饰。",
+    "可立即食用，也可冷藏10–15分钟让味道融合。"
+  ]
+}
+
+      // Аналогично: de, fr, es, it, pt, ja, ko, zh — вставлю при сохранении в файл
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    if (translations[lang]) {
+      const t = translations[lang];
+      document.getElementById("title").innerHTML = t.title;
+      document.getElementById("desc").innerHTML = t.desc;
+      document.getElementById("need").textContent = t.need;
+      document.getElementById("how").textContent = t.how;
+      document.getElementById("tips").innerHTML = t.tips;
+      document.getElementById("ingredients").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("steps").innerHTML = t.steps.map(s => `<li>${s}</li>`).join("");
+    }
+  </script>
+</body>
+</html>

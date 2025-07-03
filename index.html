@@ -10,11 +10,12 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background: #fff8f0;
-      color: #333;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0)),
+                  url('fon.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: https://tastylifehacky.github.io/recipes/fff;
     }
     header {
-      background: #ffcc5c;
       text-align: center;
       padding: 1.5rem 1rem;
     }
@@ -22,28 +23,36 @@
       max-height: 120px;
     }
     h1 {
-      margin: 1rem 0;
-      color: #ff6f3c;
+      margin: 1rem 0 0.5rem;
+      color: https://tastylifehacky.github.io/recipes/ffdd57;
+    }
+    h2.subheading {
+      font-weight: normal;
+      font-size: 1.2rem;
+      margin-top: 0.2rem;
+      color: https://tastylifehacky.github.io/recipes/f7f7f7;
     }
     .recipes {
       display: flex;
       flex-wrap: wrap;
+	  margin-top: 350px;
       gap: 1.5rem;
       padding: 2rem;
       justify-content: center;
+      background-color: rgba(0, 0, 0, 0);
     }
     .recipe {
-      background: white;
+      background: rgba(255, 255, 255, 0.8);
       border-radius: 16px;
       padding: 1rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       width: 280px;
-      transition: transform 0.2s, box-shadow 0.2s;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+      color: https://tastylifehacky.github.io/recipes/333;
     }
     .recipe:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
     .recipe a {
       text-decoration: none;
@@ -61,16 +70,16 @@
     <h1>Quick & Easy Recipes</h1>
   </header>
   <section class="recipes">
-    <div class="recipe"><a href="#"><h2>🍝 15-Minute Creamy Garlic Pasta</h2></a></div>
-    <div class="recipe"><a href="https://tastylifehacky.github.io/microwave-omelette"><h2>🥪 3-Minute Mug Omelette in the Microwave</h2></a></div>
-    <div class="recipe"><a href="#"><h2>🐔 One-Pan Honey Garlic Chicken</h2></a></div>
-    <div class="recipe"><a href="#"><h2>🥗 No-Cook Chickpea Salad (5 Minutes!)</h2></a></div>
-    <div class="recipe"><a href="#"><h2>🌮 Quick & Dirty Weeknight Tacos</h2></a></div>
-    <div class="recipe"><a href="#"><h2>🍳 10-Min Egg Fried Rice</h2></a></div>
-    <div class="recipe"><a href="#"><h2>🧀 5-Minute Cheesy Quesadilla</h2></a></div>
-    <div class="recipe"><a href="#"><h2>🥣 3-Ingredient Banana Pancakes 🥞</h2></a></div>
-    <div class="recipe"><a href="#"><h2>🥒 5-Min Cucumber Sandwiches (No Cooking!)</h2></a></div>
-    <div class="recipe"><a href="#"><h2>🍕 10-Min Tortilla Pizzas (Air Fryer or Oven!)</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/"><h2>🍝 15-Minute Creamy Garlic Pasta</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/microwave-omelette.html"><h2>🥪 3-Minute Mug Omelette in the Microwave</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/Honey-Garlic-Chicken.html"><h2>🐔 One-Pan Honey Garlic Chicken</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/No-Cook-Chickpea-Salad-(5%20Minutes!).html"><h2>🥗 No-Cook Chickpea Salad (5 Minutes!)</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/Quick & Dirty Weeknight Tacos.html"><h2>🌮 Quick & Dirty Weeknight Tacos</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/"><h2>🍳 10-Min Egg Fried Rice</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/"><h2>🧀 5-Minute Cheesy Quesadilla</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/"><h2>🥣 3-Ingredient Banana Pancakes 🥞</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/"><h2>🥒 5-Min Cucumber Sandwiches (No Cooking!)</h2></a></div>
+    <div class="recipe"><a href="https://tastylifehacky.github.io/recipes/"><h2>🍕 10-Min Tortilla Pizzas (Air Fryer or Oven!)</h2></a></div>
   </section>
 
   <script>
@@ -185,8 +194,21 @@
       ]
     };
 
-    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    const headlineTranslations = {
+      ru: "Быстрые и простые рецепты",
+      de: "Schnelle & einfache Rezepte",
+      fr: "Recettes rapides et faciles",
+      es: "Recetas rápidas y fáciles",
+      it: "Ricette veloci e facili",
+      pt: "Receitas rápidas e fáceis",
+      ja: "簡単でスピーディーなレシピ",
+      ko: "빠르고 쉬운 레시피",
+      zh: "快速又简单的食谱"
+    };
+
+    const lang = (navigator.language || "en").slice(0, 2);
     if (lang in translations) {
+      document.querySelector("h1").textContent = headlineTranslations[lang];
       document.querySelectorAll(".recipe h2").forEach((el, idx) => {
         el.textContent = translations[lang][idx];
       });

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Microwave Omelette Recipe</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("Chicken.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.7); /* полупрозрачный фон для читаемости */
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+  <div class="container">
+    <h1 id="title">🍯 One-Pan Honey Garlic Chicken</h1>
+
+  <main>
+    <p id="summary">⏱️ Ready in: 20 minutes | 🍗 Servings: 2–3 | 🧼 Easy clean-up!</p>
+  </header>
+    <header>
+    <img src="logoChicken.png" alt="Tasty & Lifehacky Logo"
+     style="width: 25%; display: block; margin: 0 auto;" />
+  </header>
+    <h2 id="ingredients-title">🛒 Ingredients:</h2>
+    <ul id="ingredients-list">
+      <li>2 chicken breasts or 4 boneless thighs</li>
+      <li>1 tbsp olive oil</li>
+      <li>3 cloves garlic (minced)</li>
+      <li>3 tbsp honey</li>
+      <li>2 tbsp soy sauce</li>
+      <li>1 tbsp apple cider vinegar or lemon juice</li>
+      <li>Salt & pepper to taste</li>
+      <li>Optional: sesame seeds and green onions for garnish</li>
+    </ul>
+
+    <h2 id="instructions-title">🔥 Instructions:</h2>
+    <ol id="instructions-list">
+      <li>Season chicken with salt and pepper on both sides.</li>
+      <li>Heat oil in a non-stick skillet over medium heat. Cook chicken for 3–4 minutes per side until golden.</li>
+      <li>Lower heat. Add minced garlic and stir for 30 seconds (don’t burn!).</li>
+      <li>Add honey, soy sauce, and vinegar. Let it bubble for 2–3 minutes until thickened.</li>
+      <li>Flip chicken in sauce until nicely glazed and fully cooked (internal temp: 165°F / 74°C).</li>
+      <li>Sprinkle with sesame seeds & green onions. Serve over rice, noodles, or veggies!</li>
+    </ol>
+
+    <h2 id="tips-title">😋 Tips:</h2>
+    <ul id="tips-list">
+      <li>Double the sauce if you like it extra sticky.</li>
+      <li>Add chili flakes for a spicy kick.</li>
+      <li>Works great with tofu or shrimp too!</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tasty & Lifehacky</p>
+  </footer>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "🍯 Курица с медом и чесноком на сковороде",
+        summary: "⏱️ Готово за 20 минут | 🍗 Порций: 2–3 | 🧼 Минимум посуды!",
+        ingredientsTitle: "🛒 Ингредиенты:",
+        ingredients: [
+          "2 куриные грудки или 4 бедрышка без костей",
+          "1 ст. л. оливкового масла",
+          "3 зубчика чеснока (измельчить)",
+          "3 ст. л. меда",
+          "2 ст. л. соевого соуса",
+          "1 ст. л. яблочного уксуса или лимонного сока",
+          "Соль и перец по вкусу",
+          "По желанию: кунжут и зеленый лук для украшения"
+        ],
+        instructionsTitle: "🔥 Приготовление:",
+        instructions: [
+          "Приправьте курицу солью и перцем с обеих сторон.",
+          "Разогрейте масло в сковороде на среднем огне. Обжаривайте курицу по 3–4 мин с каждой стороны до золотистой корочки.",
+          "Уменьшите огонь. Добавьте чеснок и обжаривайте 30 секунд (не пережгите!).",
+          "Добавьте мед, соевый соус и уксус. Готовьте 2–3 минуты до загустения.",
+          "Обваляйте курицу в соусе до полной готовности (внутренняя темп. 74°C).",
+          "Посыпьте кунжутом и зеленым луком. Подавайте с рисом, лапшой или овощами."
+        ],
+        tipsTitle: "😋 Советы:",
+        tips: [
+          "Добавьте больше соуса, если любите по-сочнее.",
+          "Можно добавить чили для остроты.",
+          "Отлично подходит и для тофу или креветок!"
+        ]
+      },
+      // Другие переводы (de, fr, es, it, pt, ja, ko, zh) могут быть добавлены здесь по аналогии
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    if (translations[lang]) {
+      const t = translations[lang];
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("summary").textContent = t.summary;
+      document.getElementById("ingredients-title").textContent = t.ingredientsTitle;
+      document.getElementById("ingredients-list").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("instructions-title").textContent = t.instructionsTitle;
+      document.getElementById("instructions-list").innerHTML = t.instructions.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("tips-title").textContent = t.tipsTitle;
+      document.getElementById("tips-list").innerHTML = t.tips.map(i => `<li>${i}</li>`).join("");
+    }
+  </script>
+</body>
+</html>

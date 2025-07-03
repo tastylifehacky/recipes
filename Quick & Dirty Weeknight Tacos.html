@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quick & Dirty Weeknight Tacos</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("Weeknight-Tacos.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="emoji" id="title">🌮 Quick & Dirty Weeknight Tacos</h1>
+    <p id="desc">🕒 Prep & Cook Time: ~20 minutes<br>🍽 Servings: 3–4<br>🔥 Level: Beginner (and tired 😅)</p>
+  <header>
+    <img src="logoTacos.png" alt="Tasty & Lifehacky Logo"
+     style="width: 50%; display: block; margin: 0 auto;" />
+  </header>
+    <p><strong id="need">✅ Ingredients:</strong></p>
+    <ul id="ingredients">
+      <li>8 small tortillas (flour or corn)</li>
+      <li>1 tbsp vegetable oil</li>
+      <li>1 lb (450g) ground beef or plant-based alternative</li>
+      <li>1 tsp garlic powder</li>
+      <li>1 tsp smoked paprika</li>
+      <li>½ tsp ground cumin</li>
+      <li>Salt & pepper to taste</li>
+      <li>½ cup salsa or canned tomatoes</li>
+      <li>1 cup shredded cheese (cheddar or Mexican blend)</li>
+      <li>1 cup shredded lettuce</li>
+      <li>1 tomato, diced</li>
+      <li>Optional: sour cream, hot sauce, avocado, lime wedges</li>
+    </ul>
+
+    <p><strong id="how">🔥 Instructions:</strong></p>
+    <ol id="steps">
+      <li>Heat oil in a pan over medium heat.</li>
+      <li>Brown the meat for 5–7 minutes, breaking it up as it cooks.</li>
+      <li>Add spices and stir well.</li>
+      <li>Add salsa or tomatoes and simmer for 2–3 minutes.</li>
+      <li>Meanwhile, warm the tortillas.</li>
+      <li>Assemble tacos: tortilla + meat + cheese + lettuce + tomato + toppings.</li>
+      <li>Eat immediately — hot, juicy, and a little messy 😄</li>
+    </ol>
+
+    <p class="emoji" id="tips">🌶️ Tips:<br>Swap meat for lentils or tofu.<br>Add a fried egg for a breakfast taco.<br>Want it spicier? Add chili or jalapeños.</p>
+  </div>
+
+<script>
+const translations = {
+  "ru": {
+    "title": "🌮 Быстрые и Наглые Тако на Ужин",
+    "desc": "🕒 Время подготовки и готовки: ~20 минут<br>🍽 Порции: 3–4<br>🔥 Уровень: Новичок (и уставший 😅)",
+    "need": "✅ Ингредиенты:",
+    "how": "🔥 Инструкция:",
+    "tips": "🌶️ Советы:<br>Замените мясо на чечевицу или тофу.<br>Добавьте яйцо — получится тако на завтрак.<br>Хотите острее? Добавьте перец чили или халапеньо.",
+    "ingredients": [
+      "8 маленьких лепёшек (пшеничных или кукурузных)",
+      "1 ст. л. растительного масла",
+      "450 г фарша или растительной альтернативы",
+      "1 ч. л. чесночного порошка",
+      "1 ч. л. копчёной паприки",
+      "½ ч. л. молотого кумина",
+      "Соль и перец по вкусу",
+      "½ стакана сальсы или консервированных томатов",
+      "1 стакан тёртого сыра (чеддер или мексиканская смесь)",
+      "1 стакан нашинкованного салата",
+      "1 помидор, нарезанный кубиками",
+      "По желанию: сметана, острый соус, авокадо, дольки лайма"
+    ],
+    "steps": [
+      "Разогрейте масло на сковороде на среднем огне.",
+      "Обжарьте фарш 5–7 минут, разбивая ложкой.",
+      "Добавьте специи и хорошо перемешайте.",
+      "Вмешайте сальсу или томаты. Томите 2–3 минуты.",
+      "Тем временем подогрейте лепёшки.",
+      "Соберите тако: лепёшка + мясо + сыр + салат + помидоры + топпинги.",
+      "Ешьте сразу — горячими и чуть неаккуратными 😄"
+    ]
+  },
+  "de": {
+    "title": "🌮 Schnelle & Schmutzige Feierabend-Tacos",
+    "desc": "🕒 Vorbereitungs- & Kochzeit: ca. 20 Minuten<br>🍽 Portionen: 3–4<br>🔥 Schwierigkeitsgrad: Anfänger (und müde 😅)",
+    "need": "✅ Zutaten:",
+    "how": "🔥 Zubereitung:",
+    "tips": "🌶️ Tipps:<br>Rindfleisch durch Linsen oder Tofu ersetzen.<br>Ein Spiegelei macht daraus ein Frühstücks-Taco.<br>Mehr Schärfe? Chili-Flocken oder Jalapeños dazu!",
+    "ingredients": [
+      "8 kleine Tortillas (Weizen oder Mais)",
+      "1 EL Pflanzenöl",
+      "450 g Rinderhack oder pflanzliche Alternative",
+      "1 TL Knoblauchpulver",
+      "1 TL geräuchertes Paprikapulver",
+      "½ TL gemahlener Kreuzkümmel",
+      "Salz & Pfeffer nach Geschmack",
+      "½ Tasse Salsa oder Dosentomaten",
+      "1 Tasse geriebener Käse (Cheddar oder mexikanische Mischung)",
+      "1 Tasse Eisbergsalat, geschnitten",
+      "1 Tomate, gewürfelt",
+      "Optional: saure Sahne, scharfe Soße, Avocado, Limettenspalten"
+    ],
+    "steps": [
+      "Öl in einer Pfanne bei mittlerer Hitze erhitzen.",
+      "Hackfleisch 5–7 Minuten anbraten, dabei zerkleinern.",
+      "Gewürze hinzufügen und gut vermengen.",
+      "Salsa oder Tomaten einrühren. 2–3 Minuten köcheln lassen.",
+      "Tortillas in einer Pfanne oder Mikrowelle erwärmen.",
+      "Tacos zusammenstellen: Tortilla + Fleisch + Käse + Salat + Tomate + Toppings.",
+      "Sofort essen, solange sie heiß & etwas unordentlich sind 😄"
+    ]
+  },
+  "fr": {
+    "title": "🌮 Tacos rapides du soir",
+    "desc": "🕒 Temps total : ~20 minutes<br>🍽 Portions : 3–4<br>🔥 Niveau : Débutant (et fatigué 😅)",
+    "need": "✅ Ingrédients :",
+    "how": "🔥 Préparation :",
+    "tips": "🌶️ Astuces:<br>Remplace la viande par des lentilles ou du tofu.<br>Ajoute un œuf au plat pour un taco du matin.<br>Plus de piquant ? Ajoute du piment ou des jalapeños.",
+    "ingredients": [
+      "8 petites tortillas (maïs ou blé)",
+      "1 c. à soupe d’huile végétale",
+      "450 g de bœuf haché ou alternative végétale",
+      "1 c. à café d’ail en poudre",
+      "1 c. à café de paprika fumé",
+      "½ c. à café de cumin moulu",
+      "Sel et poivre au goût",
+      "½ tasse de salsa ou tomates en boîte",
+      "1 tasse de fromage râpé (cheddar ou mélange mexicain)",
+      "1 tasse de laitue râpée",
+      "1 tomate coupée en dés",
+      "Facultatif : crème, sauce piquante, avocat, quartiers de citron vert"
+    ],
+    "steps": [
+      "Faire chauffer l’huile dans une poêle.",
+      "Faire revenir la viande 5–7 min en émiettant.",
+      "Ajouter les épices, bien mélanger.",
+      "Ajouter la salsa/tomates, laisser mijoter 2–3 min.",
+      "Réchauffer les tortillas.",
+      "Assembler : tortilla + viande + fromage + laitue + tomate + toppings.",
+      "Manger chaud pendant que c’est un peu le bazar 😄"
+    ]
+  },
+  "es": {
+    "title": "🌮 Tacos exprés para entre semana",
+    "desc": "🕒 Tiempo total: ~20 minutos<br>🍽 Porciones: 3–4<br>🔥 Nivel: Principiante (y cansado 😅)",
+    "need": "✅ Ingredientes:",
+    "how": "🔥 Instrucciones:",
+    "tips": "🌶️ Consejos:<br>Sustituye la carne por lentejas o tofu.<br>Agrega un huevo frito para un taco desayuno.<br>¿Quieres más picante? Añade chile o jalapeños.",
+    "ingredients": [
+      "8 tortillas pequeñas (maíz o harina)",
+      "1 cda de aceite vegetal",
+      "450 g de carne molida o sustituto vegetal",
+      "1 cdta de ajo en polvo",
+      "1 cdta de pimentón ahumado",
+      "½ cdta de comino molido",
+      "Sal y pimienta al gusto",
+      "½ taza de salsa o tomates enlatados",
+      "1 taza de queso rallado",
+      "1 taza de lechuga picada",
+      "1 tomate en cubos",
+      "Opcional: crema agria, salsa picante, aguacate, gajos de lima"
+    ],
+    "steps": [
+      "Calienta el aceite en sartén.",
+      "Dora la carne 5–7 min, desmenuzándola.",
+      "Agrega especias, mezcla bien.",
+      "Añade salsa o tomates, cocina 2–3 min.",
+      "Calienta las tortillas.",
+      "Arma los tacos: tortilla + carne + queso + lechuga + tomate + toppings.",
+      "¡Come al instante mientras están calientes y jugosos 😄!"
+    ]
+  },
+  "it": {
+    "title": "🌮 Tacos veloci per la sera",
+    "desc": "🕒 Tempo totale: ~20 minuti<br>🍽 Porzioni: 3–4<br>🔥 Livello: Principiante (e stanco 😅)",
+    "need": "✅ Ingredienti:",
+    "how": "🔥 Procedimento:",
+    "tips": "🌶️ Consigli:<br>Sostituisci la carne con lenticchie o tofu.<br>Aggiungi un uovo fritto per la versione colazione.<br>Vuoi più piccante? Aggiungi peperoncino o jalapeño.",
+    "ingredients": [
+      "8 tortillas piccole (mais o farina)",
+      "1 cucchiaio di olio vegetale",
+      "450 g carne macinata o alternativa vegetale",
+      "1 cucchiaino di aglio in polvere",
+      "1 cucchiaino di paprika affumicata",
+      "½ cucchiaino di cumino",
+      "Sale e pepe q.b.",
+      "½ tazza di salsa o pomodori in scatola",
+      "1 tazza di formaggio grattugiato",
+      "1 tazza di lattuga tritata",
+      "1 pomodoro a cubetti",
+      "Facoltativi: panna acida, salsa piccante, avocado, lime"
+    ],
+    "steps": [
+      "Scalda l'olio in padella.",
+      "Cuoci la carne 5–7 min spezzettandola.",
+      "Aggiungi le spezie, mescola bene.",
+      "Unisci la salsa o i pomodori, fai sobbollire 2–3 min.",
+      "Scalda le tortillas.",
+      "Componi i tacos: tortilla + carne + formaggio + lattuga + pomodoro + condimenti.",
+      "Mangia subito finché sono caldi e disordinati 😄"
+    ]
+  },
+  "pt": {
+    "title": "🌮 Tacos Rápidos para a Noite",
+    "desc": "🕒 Tempo total: ~20 minutos<br>🍽 Porções: 3–4<br>🔥 Nível: Iniciante (e cansado 😅)",
+    "need": "✅ Ingredientes:",
+    "how": "🔥 Modo de preparo:",
+    "tips": "🌶️ Dicas:<br>Substitua a carne por lentilhas ou tofu.<br>Adicione um ovo frito para versão matinal.<br>Quer mais picância? Coloque pimenta ou jalapeños.",
+    "ingredients": [
+      "8 tortilhas pequenas (de trigo ou milho)",
+      "1 colher de sopa de óleo vegetal",
+      "450g de carne moída ou alternativa vegetal",
+      "1 colher de chá de alho em pó",
+      "1 colher de chá de páprica defumada",
+      "½ colher de chá de cominho",
+      "Sal e pimenta a gosto",
+      "½ xícara de salsa ou tomate enlatado",
+      "1 xícara de queijo ralado",
+      "1 xícara de alface picada",
+      "1 tomate picado",
+      "Opcional: creme azedo, molho picante, abacate, limão"
+    ],
+    "steps": [
+      "Aqueça o óleo em uma frigideira.",
+      "Cozinhe a carne por 5–7 min, esfarelando.",
+      "Adicione os temperos e misture bem.",
+      "Junte a salsa ou tomate e cozinhe 2–3 min.",
+      "Aqueça as tortilhas.",
+      "Monte os tacos: tortilha + carne + queijo + alface + tomate + coberturas.",
+      "Coma imediatamente enquanto estão quentes e bagunçados 😄"
+    ]
+  },
+  "ja": {
+    "title": "🌮 平日夜のズボラタコス",
+    "desc": "🕒 調理時間：約20分<br>🍽 3～4人分<br>🔥 難易度：初心者（お疲れ気味 😅）",
+    "need": "✅ 材料：",
+    "how": "🔥 作り方：",
+    "tips": "🌶️ ヒント：<br>ひき肉の代わりに豆や豆腐を使ってもOK。<br>目玉焼きをのせれば朝食風。<br>辛さUPには唐辛子やハラペーニョを。",
+    "ingredients": [
+      "タコス用トルティーヤ 8枚（小・コーントルティーヤでも可）",
+      "植物油 大さじ1",
+      "牛ひき肉 450g または植物性代替品",
+      "ガーリックパウダー 小さじ1",
+      "スモークパプリカ 小さじ1",
+      "クミンパウダー 小さじ½",
+      "塩・コショウ 適量",
+      "サルサまたは缶詰トマト ½カップ",
+      "チーズ（細切り）1カップ",
+      "レタス（千切り）1カップ",
+      "トマト 1個（角切り）",
+      "お好みで：サワークリーム、ホットソース、アボカド、ライム"
+    ],
+    "steps": [
+      "中火でフライパンに油を熱する。",
+      "ひき肉を炒めて 5～7 分。ほぐしながら焼く。",
+      "調味料を加えてよく混ぜる。",
+      "サルサかトマトを加えて 2～3 分煮る。",
+      "別の鍋や電子レンジでトルティーヤを温める。",
+      "具材をトルティーヤに乗せてタコスを組み立てる。",
+      "温かいうちに messy に食べましょう😄"
+    ]
+  },
+  "ko": {
+    "title": "🌮 퀵 & 간단한 평일 타코",
+    "desc": "🕒 준비 & 조리 시간: 약 20분<br>🍽 3–4인분<br>🔥 난이도: 초보자 (지친 상태 😅)",
+    "need": "✅ 재료:",
+    "how": "🔥 만드는 법:",
+    "tips": "🌶️ 팁:<br>고기 대신 렌틸콩이나 두부 가능.<br>계란 프라이 추가로 아침타코 스타일.<br>더 맵게? 고추나 할라피뇨 추가!",
+    "ingredients": [
+      "작은 타코용 토르티야 8장",
+      "식물성 오일 1큰술",
+      "다진 소고기 또는 식물성 고기 450g",
+      "마늘 가루 1작은술",
+      "훈제 파프리카 1작은술",
+      "큐민가루 ½작은술",
+      "소금, 후추 약간",
+      "살사 또는 캔 토마토 ½컵",
+      "잘게 간 치즈 1컵",
+      "양상추 채 썬 것 1컵",
+      "토마토 1개, 깍둑썰기",
+      "옵션: 사워크림, 매운 소스, 아보카도, 라임"
+    ],
+    "steps": [
+      "중불로 팬에 기름을 두른다.",
+      "고기를 넣고 5–7분 볶으며 으깬다.",
+      "향신료를 넣고 섞는다.",
+      "살사/토마토를 넣고 2–3분 끓인다.",
+      "그동안 토르티야를 데운다.",
+      "토르티야에 재료들을 얹어 타코 완성.",
+      "따뜻할 때 먹어야 messy한 맛이 난다 😄"
+    ]
+  },
+  "zh": {
+    "title": "🌮 快速平日晚餐塔可",
+    "desc": "🕒 准备+烹饪时间：約20分钟<br>🍽 份量: 3–4人<br>🔥 难度: 初学者（和疲惫的人 😅）",
+    "need": "✅ 食材：",
+    "how": "🔥 步骤：",
+    "tips": "🌶️ 小贴士：<br>可用扁豆或豆腐代替牛肉。<br>加个煎蛋试试早餐塔可风味。<br>想更辣？加辣椒片或墨西哥辣椒。",
+    "ingredients": [
+      "8张小玉米或面粉玉米饼",
+      "1汤匙植物油",
+      "450克牛肉末或植物替代品",
+      "1茶匙大蒜粉",
+      "1茶匙烟熏辣椒粉",
+      "½茶匙孜然粉",
+      "适量盐和黑胡椒",
+      "½杯莎莎酱或罐装番茄",
+      "1杯切丝奶酪（切达或墨西哥混合奶酪）",
+      "1杯切碎生菜",
+      "1个番茄，切丁",
+      "可选：酸奶油、辣酱、牛油果、青柠"
+    ],
+    "steps": [
+      "用中火加热油。",
+      "煎牛肉末5–7分钟，炒散。",
+      "加入调味料拌匀。",
+      "加入莎莎酱或番茄，炖煮2–3分钟。",
+      "同时加热玉米饼。",
+      "组合：玉米饼 + 肉 + 奶酪 + 生菜 + 番茄 + 配料。",
+      "趁热食用，越乱越香 😄"
+    ]
+  }
+};
+const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+if (translations[lang]) {
+  const t = translations[lang];
+  document.getElementById("title").innerHTML = t.title;
+  document.getElementById("desc").innerHTML = t.desc;
+  document.getElementById("need").textContent = t.need;
+  document.getElementById("how").textContent = t.how;
+  document.getElementById("tips").innerHTML = t.tips;
+  document.getElementById("ingredients").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+  document.getElementById("steps").innerHTML = t.steps.map(s => `<li>${s}</li>`).join("");
+}
+</script>
+</body>
+</html>

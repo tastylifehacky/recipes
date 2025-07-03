@@ -9,17 +9,18 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 2rem;
-      background-color: #fff8f0;
+      background: url("Omelette.jpg") no-repeat center center fixed;
+      background-size: cover;
       color: #333;
       line-height: 1.6;
     }
     .container {
       max-width: 600px;
       margin: auto;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.7); /* полупрозрачный фон для читаемости */
       padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     img {
       width: 100%;
@@ -39,7 +40,10 @@
 </head>
 <body>
   <div class="container">
-    <img src="microwave-omelette.jpg" alt="Microwave Omelette" />
+    <header>
+    <img src="logoomelette.png" alt="Tasty & Lifehacky Logo"
+     style="width: 40%; display: block; margin: 0 auto;" />
+  </header>
     <h1 id="title" class="emoji">🥚 Microwave Omelette</h1>
     <p id="intro">
       <strong>Breakfast in 3 minutes — in one mug, with zero dishes!</strong><br>
