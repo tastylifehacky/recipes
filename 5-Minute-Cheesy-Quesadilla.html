@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5-Minute Cheesy Quesadilla</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("Quesadilla.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="emoji" id="title">🧀 5-Minute Cheesy Quesadilla</h1>
+    <p id="desc">Crispy outside, melty inside — all the comfort of cheese with none of the hassle.</p>
+    <p><strong id="need">👨‍🍳 You’ll need:</strong></p>
+    <ul id="ingredients">
+      <li>1 flour tortilla</li>
+      <li>½ cup shredded cheese (cheddar, mozzarella, or a mix)</li>
+      <li>Optional: salsa, jalapeños, cooked chicken, herbs</li>
+    </ul>
+    <p><strong id="how">📍 How to make it:</strong></p>
+    <ol id="steps">
+      <li>Place tortilla in a hot nonstick pan.</li>
+      <li>Sprinkle cheese on one half.</li>
+      <li>Add optional fillings if desired.</li>
+      <li>Fold tortilla over and press gently.</li>
+      <li>Cook 2–3 mins per side until golden & crispy.</li>
+      <li>Slice & dip — it’s cheese time!</li>
+    </ol>
+    <header>
+      <img src="logoQuesadilla.png" alt="Tasty & Lifehacky Logo"
+           style="width: 40%; display: block; margin: 0 auto;" />
+    </header>
+    <p class="emoji" id="save">✨ Save it for your lazy lunch days!</p>
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "🧀 Сырная кесадилья за 5 минут",
+        desc: "Снаружи хрустящая, внутри тянущийся сыр — максимум вкуса, минимум усилий.",
+        need: "👨‍🍳 Вам понадобится:",
+        how: "📍 Как готовить:",
+        ingredients: [
+          "1 пшеничная тортилья",
+          "½ чашки тёртого сыра (чеддер, моцарелла или смесь)",
+          "По желанию: сальса, халапеньо, курица, зелень"
+        ],
+        steps: [
+          "Разогрейте сковороду и положите тортилью.",
+          "Посыпьте сыром одну половину.",
+          "Добавьте начинку по желанию.",
+          "Сложите тортилью пополам и слегка прижмите.",
+          "Обжаривайте 2–3 минуты с каждой стороны до золотистой корочки.",
+          "Нарежьте и подавайте с соусом — сырное время!"
+        ],
+        save: "✨ Сохраните для ленивых обедов!"
+      },
+      de: {
+        title: "🧀 Käsige Quesadilla in 5 Minuten",
+        desc: "Knusprig außen, geschmolzen innen – Käsekomfort ganz ohne Aufwand.",
+        need: "👨‍🍳 Du brauchst:",
+        how: "📍 So geht’s:",
+        ingredients: [
+          "1 Weizentortilla",
+          "½ Tasse geriebener Käse (Cheddar, Mozzarella oder Mischung)",
+          "Optional: Salsa, Jalapeños, Hähnchen, Kräuter"
+        ],
+        steps: [
+          "Tortilla in heißer Pfanne erhitzen.",
+          "Käse auf eine Hälfte streuen.",
+          "Füllung nach Wunsch hinzufügen.",
+          "Zuklappen und andrücken.",
+          "2–3 Min. pro Seite braten bis goldbraun.",
+          "Schneiden & dippen — Käsezeit!"
+        ],
+        save: "✨ Für deine faulen Mittagstage speichern!"
+      },
+      fr: {
+        title: "🧀 Quesadilla au fromage en 5 minutes",
+        desc: "Craquante à l’extérieur, fondante à l’intérieur — le réconfort du fromage sans tracas.",
+        need: "👨‍🍳 Il te faut :",
+        how: "📍 Préparation :",
+        ingredients: [
+          "1 tortilla de blé",
+          "½ tasse de fromage râpé (cheddar, mozzarella ou mix)",
+          "Optionnel : salsa, jalapeños, poulet, herbes"
+        ],
+        steps: [
+          "Chauffe une poêle et ajoute la tortilla.",
+          "Ajoute le fromage sur une moitié.",
+          "Ajoute des garnitures si souhaité.",
+          "Plie la tortilla et presse doucement.",
+          "Fais cuire 2–3 min de chaque côté.",
+          "Coupe et trempe — c’est l’heure du fromage !"
+        ],
+        save: "✨ À sauvegarder pour les déjeuners paresseux !"
+      },
+      es: {
+        title: "🧀 Quesadilla con queso en 5 minutos",
+        desc: "Crujiente por fuera, derretida por dentro — puro confort sin complicaciones.",
+        need: "👨‍🍳 Necesitas:",
+        how: "📍 Preparación:",
+        ingredients: [
+          "1 tortilla de harina",
+          "½ taza de queso rallado (cheddar, mozzarella o mezcla)",
+          "Opcional: salsa, jalapeños, pollo cocido, hierbas"
+        ],
+        steps: [
+          "Pon la tortilla en sartén caliente.",
+          "Agrega queso a una mitad.",
+          "Agrega extras si quieres.",
+          "Dobla la tortilla y presiona.",
+          "Cocina 2–3 min por lado hasta dorar.",
+          "¡Corta, moja y disfruta del queso!"
+        ],
+        save: "✨ ¡Guárdala para tus almuerzos perezosos!"
+      },
+      it: {
+        title: "🧀 Quesadilla al formaggio in 5 minuti",
+        desc: "Croccante fuori, filante dentro — tutto il gusto del formaggio senza stress.",
+        need: "👨‍🍳 Ti serve:",
+        how: "📍 Procedimento:",
+        ingredients: [
+          "1 tortilla di farina",
+          "½ tazza di formaggio grattugiato (cheddar, mozzarella o mix)",
+          "Facoltativo: salsa, jalapeños, pollo, erbe"
+        ],
+        steps: [
+          "Metti la tortilla in padella calda.",
+          "Aggiungi formaggio su una metà.",
+          "Aggiungi altri ingredienti se vuoi.",
+          "Chiudi e schiaccia leggermente.",
+          "Cuoci 2–3 min per lato finché dorata.",
+          "Taglia e intingi — è ora di formaggio!"
+        ],
+        save: "✨ Salva per i tuoi pranzi pigri!"
+      },
+      pt: {
+        title: "🧀 Quesadilla de queijo em 5 minutos",
+        desc: "Crocrante por fora, derretida por dentro — puro aconchego sem esforço.",
+        need: "👨‍🍳 Você vai precisar de:",
+        how: "📍 Como fazer:",
+        ingredients: [
+          "1 tortilla de trigo",
+          "½ xícara de queijo ralado (cheddar, mussarela ou mix)",
+          "Opcional: salsa, jalapeños, frango, ervas"
+        ],
+        steps: [
+          "Coloque a tortilla na frigideira quente.",
+          "Adicione queijo em uma metade.",
+          "Inclua recheios opcionais.",
+          "Dobre e pressione levemente.",
+          "Cozinhe 2–3 min de cada lado até dourar.",
+          "Corte e mergulhe — hora do queijo!"
+        ],
+        save: "✨ Salve para seus almoços preguiçosos!"
+      },
+      ja: {
+        title: "🧀 チーズケサディーヤ（5分）",
+        desc: "外はカリッと、中はとろ〜り。面倒なしでチーズを堪能。",
+        need: "👨‍🍳 用意するもの：",
+        how: "📍 作り方：",
+        ingredients: [
+          "フラワートルティーヤ 1枚",
+          "チーズ ½カップ（チェダー、モッツァレラなど）",
+          "お好みで：サルサ、ハラペーニョ、鶏肉、ハーブ"
+        ],
+        steps: [
+          "温めたフライパンにトルティーヤを置く。",
+          "片面にチーズをのせる。",
+          "好みで具材を追加する。",
+          "半分に折って軽く押す。",
+          "両面を2～3分ずつ焼く。",
+          "切ってディップ！チーズタイム！"
+        ],
+        save: "✨ 怠けたい日のランチに保存しよう！"
+      },
+      ko: {
+        title: "🧀 5분 치즈 퀘사디야",
+        desc: "겉은 바삭, 속은 쭉 늘어나는 치즈 — 간편함 속의 행복!",
+        need: "👨‍🍳 준비물:",
+        how: "📍 만드는 방법:",
+        ingredients: [
+          "밀가루 또띠야 1장",
+          "치즈 ½컵 (체다, 모짜렐라 등)",
+          "선택: 살사, 할라피뇨, 닭고기, 허브"
+        ],
+        steps: [
+          "팬에 또띠야를 올립니다.",
+          "반쪽에 치즈를 뿌립니다.",
+          "기호에 따라 재료 추가.",
+          "반으로 접어 눌러줍니다.",
+          "양면 2~3분씩 구워줍니다.",
+          "썰어서 디핑 — 치즈 타임!"
+        ],
+        save: "✨ 게으른 점심을 위한 저장용 레시피!"
+      },
+      zh: {
+        title: "🧀 5分钟芝士玉米饼",
+        desc: "外酥里嫩、拉丝芝士 — 简单又治愈！",
+        need: "👨‍🍳 你需要：",
+        how: "📍 做法：",
+        ingredients: [
+          "1张面粉玉米饼",
+          "½杯碎芝士（车达、马苏里拉或混合）",
+          "可选：莎莎酱、辣椒、熟鸡肉、香草"
+        ],
+        steps: [
+          "在热锅中放入玉米饼。",
+          "在一半撒上芝士。",
+          "加上可选配料。",
+          "对折并轻压。",
+          "每面煎2–3分钟，至金黄酥脆。",
+          "切块沾酱 — 芝士时间到！"
+        ],
+        save: "✨ 收藏起来，懒人午餐就靠它！"
+      }
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    const t = translations[lang];
+    if (t) {
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("desc").textContent = t.desc;
+      document.getElementById("need").textContent = t.need;
+      document.getElementById("how").textContent = t.how;
+      document.getElementById("save").textContent = t.save;
+      document.getElementById("ingredients").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("steps").innerHTML = t.steps.map(s => `<li>${s}</li>`).join("");
+    }
+  </script>
+</body>
+</html>

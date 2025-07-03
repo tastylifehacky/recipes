@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3-Ingredient Banana Pancakes</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("Pancakes.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="emoji" id="title">🥣 3-Ingredient Banana Pancakes 🥞</h1>
+    <p id="desc">Healthy-ish, fluffy & no blender needed — breakfast just got easier!</p>
+    <p><strong id="need">👨‍🍳 You’ll need:</strong></p>
+    <ul id="ingredients">
+      <li>1 ripe banana</li>
+      <li>2 eggs</li>
+      <li>¼ tsp baking powder (optional, but fluffier!)</li>
+      <li>Optional: pinch of cinnamon, vanilla, or berries</li>
+    </ul>
+    <header>
+      <img src="logoPancakes.png" alt="Tasty & Lifehacky Logo"
+           style="width: 40%; display: block; margin: 0 auto;" />
+    </header>	
+    <p><strong id="how">📍 How to make it:</strong></p>
+    <ol id="steps">
+      <li>Mash banana in a bowl.</li>
+      <li>Add eggs and baking powder, mix well.</li>
+      <li>Heat a nonstick pan over medium.</li>
+      <li>Spoon small rounds into pan.</li>
+      <li>Cook 1–2 mins per side, flip gently.</li>
+      <li>Stack ’em up — devour with fruit, yogurt or syrup!</li>
+    </ol>
+    <p class="emoji" id="save">✨ Save this — perfect for mornings on autopilot.</p>
+  </div>
+  <script>
+    const translations = {
+      ru: {
+        title: "🥣 Банановые панкейки из 3 ингредиентов 🥞",
+        desc: "Полезно, пышно и без блендера — завтрак стал проще!",
+        need: "👨‍🍳 Вам понадобится:",
+        how: "📍 Как готовить:",
+        ingredients: [
+          "1 спелый банан",
+          "2 яйца",
+          "¼ ч. л. разрыхлителя (по желанию, для пышности)",
+          "По желанию: щепотка корицы, ванили или ягоды"
+        ],
+        steps: [
+          "Разомните банан в миске.",
+          "Добавьте яйца и разрыхлитель, хорошо перемешайте.",
+          "Разогрейте сковороду на среднем огне.",
+          "Выкладывайте тесто маленькими порциями.",
+          "Готовьте по 1–2 мин с каждой стороны, аккуратно переворачивая.",
+          "Сложите стопкой — ешьте с фруктами, йогуртом или сиропом!"
+        ],
+        save: "✨ Сохраните — идеальный завтрак на автопилоте!"
+      },
+      de: {
+        title: "🥣 3-Zutaten Bananenpfannkuchen 🥞",
+        desc: "Gesund-ish, fluffig & ohne Mixer – Frühstück war nie einfacher!",
+        need: "👨‍🍳 Du brauchst:",
+        how: "📍 So geht’s:",
+        ingredients: [
+          "1 reife Banane",
+          "2 Eier",
+          "¼ TL Backpulver (optional, für mehr Fluffigkeit)",
+          "Optional: Zimt, Vanille oder Beeren"
+        ],
+        steps: [
+          "Banane in einer Schüssel zerdrücken.",
+          "Eier & Backpulver zugeben und gut mischen.",
+          "Pfanne bei mittlerer Hitze erhitzen.",
+          "Kleine Portionen in Pfanne geben.",
+          "1–2 Min. pro Seite braten, vorsichtig wenden.",
+          "Stapeln & mit Obst, Joghurt oder Sirup servieren!"
+        ],
+        save: "✨ Speichern — perfekt für Morgen im Halbschlaf!"
+      },
+      fr: {
+        title: "🥣 Pancakes banane en 3 ingrédients 🥞",
+        desc: "Sains, moelleux et sans blender — petit-déj ultra facile !",
+        need: "👨‍🍳 Il te faut :",
+        how: "📍 Préparation :",
+        ingredients: [
+          "1 banane mûre",
+          "2 œufs",
+          "¼ c. à c. de levure chimique (optionnel)",
+          "Optionnel : cannelle, vanille ou fruits rouges"
+        ],
+        steps: [
+          "Écrase la banane dans un bol.",
+          "Ajoute les œufs & levure, mélange bien.",
+          "Fais chauffer une poêle antiadhésive à feu moyen.",
+          "Verse des petits tas de pâte.",
+          "Fais cuire 1–2 min par face, retourne délicatement.",
+          "Empile-les et régale-toi avec fruits, yaourt ou sirop !"
+        ],
+        save: "✨ Garde ça — parfait pour les matins en pilote automatique !"
+      },
+      es: {
+        title: "🥣 Panqueques de plátano (3 ingredientes) 🥞",
+        desc: "Saludables, esponjosos y sin licuadora — ¡desayuno fácil!",
+        need: "👨‍🍳 Necesitas:",
+        how: "📍 Preparación:",
+        ingredients: [
+          "1 plátano maduro",
+          "2 huevos",
+          "¼ cdita de polvo de hornear (opcional)",
+          "Opcional: canela, vainilla o frutas"
+        ],
+        steps: [
+          "Tritura el plátano en un bol.",
+          "Agrega los huevos y polvo, mezcla bien.",
+          "Calienta una sartén antiadherente.",
+          "Vierte porciones pequeñas.",
+          "Cocina 1–2 min por lado, con cuidado.",
+          "Apílalos y sirve con fruta, yogur o sirope."
+        ],
+        save: "✨ ¡Guárdalo para mañanas sin cerebro!"
+      },
+      it: {
+        title: "🥣 Pancake alla banana con 3 ingredienti 🥞",
+        desc: "Sani, soffici e senza frullatore — colazione smart!",
+        need: "👨‍🍳 Ti serve:",
+        how: "📍 Procedimento:",
+        ingredients: [
+          "1 banana matura",
+          "2 uova",
+          "¼ cucchiaino di lievito (opzionale)",
+          "Opzionale: cannella, vaniglia o frutti"
+        ],
+        steps: [
+          "Schiaccia la banana in una ciotola.",
+          "Aggiungi uova e lievito, mescola bene.",
+          "Scalda una padella antiaderente.",
+          "Versa piccole porzioni di impasto.",
+          "Cuoci 1–2 min per lato, girando con cura.",
+          "Impila e gusta con frutta, yogurt o sciroppo!"
+        ],
+        save: "✨ Salva per le mattine in modalità zombie!"
+      },
+      pt: {
+        title: "🥣 Panquecas de banana com 3 ingredientes 🥞",
+        desc: "Saudável, fofinha e sem liquidificador — café da manhã descomplicado!",
+        need: "👨‍🍳 Você vai precisar de:",
+        how: "📍 Como fazer:",
+        ingredients: [
+          "1 banana madura",
+          "2 ovos",
+          "¼ colher de chá de fermento (opcional)",
+          "Opcional: canela, baunilha ou frutas"
+        ],
+        steps: [
+          "Amasse a banana em uma tigela.",
+          "Adicione ovos e fermento, misture bem.",
+          "Aqueça frigideira antiaderente.",
+          "Coloque porções pequenas.",
+          "Cozinhe 1–2 min por lado, virando com cuidado.",
+          "Empilhe e coma com frutas, iogurte ou melado!"
+        ],
+        save: "✨ Salve para manhãs no piloto automático!"
+      },
+      ja: {
+        title: "🥣 バナナパンケーキ（材料3つ）🥞",
+        desc: "ふわふわでヘルシー、ミキサー不要！朝食が簡単に！",
+        need: "👨‍🍳 用意するもの：",
+        how: "📍 作り方：",
+        ingredients: [
+          "熟したバナナ 1本",
+          "卵 2個",
+          "ベーキングパウダー 小さじ¼（お好みで）",
+          "お好みで：シナモン、バニラ、ベリー"
+        ],
+        steps: [
+          "バナナをボウルで潰す。",
+          "卵とベーキングパウダーを加えて混ぜる。",
+          "中火でフライパンを熱する。",
+          "小さく丸く流し入れる。",
+          "両面を1〜2分焼く。丁寧に返す。",
+          "積み上げて果物やヨーグルトとどうぞ！"
+        ],
+        save: "✨ 保存して、忙しい朝に使ってね！"
+      },
+      ko: {
+        title: "🥣 바나나 팬케이크 (3가지 재료) 🥞",
+        desc: "건강하고 폭신폭신, 믹서기 필요 없음 — 아침이 쉬워진다!",
+        need: "👨‍🍳 준비물:",
+        how: "📍 만드는 법:",
+        ingredients: [
+          "잘 익은 바나나 1개",
+          "계란 2개",
+          "베이킹파우더 ¼작은술 (선택사항)",
+          "선택사항: 계피, 바닐라, 베리"
+        ],
+        steps: [
+          "바나나를 그릇에 으깨세요.",
+          "계란과 베이킹파우더를 넣고 잘 섞으세요.",
+          "중불로 팬을 예열하세요.",
+          "작은 팬케이크 모양으로 반죽을 올리세요.",
+          "앞뒤로 1–2분씩 조리하세요.",
+          "쌓아 올리고 과일, 요거트, 시럽과 함께 즐기세요!"
+        ],
+        save: "✨ 저장하세요 — 자동운전 아침에 딱이에요!"
+      },
+      zh: {
+        title: "🥣 三种材料香蕉煎饼 🥞",
+        desc: "健康、松软、不用搅拌机 — 让早餐更简单！",
+        need: "👨‍🍳 你需要准备：",
+        how: "📍 做法：",
+        ingredients: [
+          "1根熟香蕉",
+          "2个鸡蛋",
+          "¼茶匙泡打粉（可选，更蓬松）",
+          "可选：肉桂、香草或浆果"
+        ],
+        steps: [
+          "将香蕉捣碎在碗里。",
+          "加入鸡蛋和泡打粉，搅拌均匀。",
+          "中火加热不粘锅。",
+          "舀入小圆形面糊。",
+          "每面煎1–2分钟，轻轻翻面。",
+          "堆叠起来配水果、酸奶或糖浆享用！"
+        ],
+        save: "✨ 收藏这份早餐法宝！"
+      }
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    const t = translations[lang];
+    if (t) {
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("desc").textContent = t.desc;
+      document.getElementById("need").textContent = t.need;
+      document.getElementById("how").textContent = t.how;
+      document.getElementById("save").textContent = t.save;
+      document.getElementById("ingredients").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("steps").innerHTML = t.steps.map(s => `<li>${s}</li>`).join("");
+    }
+  </script>
+</body>
+</html>

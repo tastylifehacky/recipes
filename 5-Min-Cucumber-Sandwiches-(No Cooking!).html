@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5-Min Cucumber Sandwiches</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("(No Cooking!).jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="emoji" id="title">🥒 5-Min Cucumber Sandwiches (No Cooking!)</h1>
+    <p id="desc">Refreshing, posh & actually filling — the ultimate lazy snack.</p>
+    <p><strong id="need">👨‍🍳 You’ll need:</strong></p>
+    <ul id="ingredients">
+      <li>2 slices of white bread (crusts off)</li>
+      <li>1 tbsp cream cheese or butter</li>
+      <li>Thinly sliced cucumber</li>
+      <li>Pinch of salt</li>
+      <li>Optional: fresh dill or mint</li>
+    </ul>
+    <p><strong id="how">📍 How to make it:</strong></p>
+    <ol id="steps">
+      <li>Spread cream cheese or butter on bread.</li>
+      <li>Layer cucumber slices evenly.</li>
+      <li>Sprinkle with salt and herbs.</li>
+      <li>Close the sandwich and slice into triangles or fingers.</li>
+      <li>Serve immediately or chill briefly.</li>
+    </ol>
+    <header>
+      <img src="logo(No Cooking!).png" alt="Tasty & Lifehacky Logo"
+           style="width: 40%; display: block; margin: 0 auto;" />
+    </header>
+    <p class="emoji" id="save">✨ Save this — it’s afternoon tea made easy.</p>
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "🥒 Огуречные сэндвичи за 5 минут (без готовки!)",
+        desc: "Свежо, элегантно и реально сытно — идеальный ленивый перекус.",
+        need: "👨‍🍳 Вам понадобится:",
+        how: "📍 Как готовить:",
+        ingredients: [
+          "2 ломтика белого хлеба (без корок)",
+          "1 ст. л. сливочного сыра или масла",
+          "Тонкие ломтики огурца",
+          "Щепотка соли",
+          "По желанию: укроп или мята"
+        ],
+        steps: [
+          "Намажьте хлеб сыром или маслом.",
+          "Выложите ломтики огурца ровным слоем.",
+          "Посыпьте солью и зеленью.",
+          "Накройте вторым ломтиком и нарежьте на треугольники.",
+          "Подавайте сразу или немного охладите."
+        ],
+        save: "✨ Сохраните — идеальный вариант для чая без суеты!"
+      },
+      de: {
+        title: "🥒 5-Minuten-Gurkensandwiches (ohne Kochen!)",
+        desc: "Erfrischend, edel & sättigend – der ultimative faule Snack.",
+        need: "👨‍🍳 Du brauchst:",
+        how: "📍 So geht’s:",
+        ingredients: [
+          "2 Scheiben Weißbrot (Rinde entfernt)",
+          "1 EL Frischkäse oder Butter",
+          "Dünne Gurkenscheiben",
+          "Prise Salz",
+          "Optional: frischer Dill oder Minze"
+        ],
+        steps: [
+          "Bestreiche Brot mit Käse oder Butter.",
+          "Belege mit Gurkenscheiben.",
+          "Salzen und mit Kräutern bestreuen.",
+          "Sandwich schließen, in Dreiecke schneiden.",
+          "Sofort servieren oder kurz kühlen."
+        ],
+        save: "✨ Speichern — Nachmittagstee auf die schnelle Art!"
+      },
+      fr: {
+        title: "🥒 Sandwichs au concombre en 5 min (sans cuisson!)",
+        desc: "Rafraîchissant, chic & nourrissant — le snack paresseux par excellence.",
+        need: "👨‍🍳 Il te faut :",
+        how: "📍 Préparation :",
+        ingredients: [
+          "2 tranches de pain de mie (sans croûte)",
+          "1 c. à s. de fromage frais ou beurre",
+          "Concombre en fines tranches",
+          "Une pincée de sel",
+          "Optionnel : aneth ou menthe fraîche"
+        ],
+        steps: [
+          "Tartine le pain de fromage ou beurre.",
+          "Ajoute les tranches de concombre.",
+          "Saupoudre de sel et d’herbes.",
+          "Ferme le sandwich et découpe en triangles.",
+          "Sers immédiatement ou laisse au frais."
+        ],
+        save: "✨ Garde ça — le thé de l’après-midi simplifié !"
+      },
+      es: {
+        title: "🥒 Sándwiches de pepino en 5 minutos (sin cocinar)",
+        desc: "Refrescantes, elegantes y llenadores — el snack perezoso perfecto.",
+        need: "👨‍🍳 Necesitas:",
+        how: "📍 Preparación:",
+        ingredients: [
+          "2 rebanadas de pan blanco (sin corteza)",
+          "1 cda de queso crema o mantequilla",
+          "Pepino en rodajas finas",
+          "Una pizca de sal",
+          "Opcional: eneldo fresco o menta"
+        ],
+        steps: [
+          "Unta queso o mantequilla en el pan.",
+          "Agrega rodajas de pepino.",
+          "Espolvorea sal y hierbas.",
+          "Cierra el sándwich y corta en triángulos.",
+          "Sirve al instante o enfría un poco."
+        ],
+        save: "✨ Guarda esto — té de la tarde fácil y rápido."
+      },
+      it: {
+        title: "🥒 Sandwich al cetriolo in 5 minuti (senza cottura!)",
+        desc: "Freschi, eleganti & sazianti — lo snack pigro definitivo.",
+        need: "👨‍🍳 Ti serve:",
+        how: "📍 Procedimento:",
+        ingredients: [
+          "2 fette di pane bianco (senza crosta)",
+          "1 cucchiaio di formaggio spalmabile o burro",
+          "Fette sottili di cetriolo",
+          "Un pizzico di sale",
+          "Facoltativo: aneto o menta fresca"
+        ],
+        steps: [
+          "Spalma il pane con formaggio o burro.",
+          "Aggiungi le fette di cetriolo.",
+          "Cospargi con sale ed erbe aromatiche.",
+          "Chiudi il sandwich e taglia a triangoli.",
+          "Servi subito o raffredda leggermente."
+        ],
+        save: "✨ Salvalo — tè del pomeriggio, versione facile!"
+      },
+      pt: {
+        title: "🥒 Sanduíches de pepino em 5 minutos (sem cozinhar!)",
+        desc: "Refrescante, chique e surpreendentemente satisfatório — o lanche preguiçoso perfeito.",
+        need: "👨‍🍳 Você vai precisar de:",
+        how: "📍 Como fazer:",
+        ingredients: [
+          "2 fatias de pão branco (sem casca)",
+          "1 colher de sopa de cream cheese ou manteiga",
+          "Fatias finas de pepino",
+          "Uma pitada de sal",
+          "Opcional: endro ou hortelã fresca"
+        ],
+        steps: [
+          "Passe o queijo ou manteiga no pão.",
+          "Coloque as fatias de pepino.",
+          "Polvilhe com sal e ervas.",
+          "Feche o sanduíche e corte em triângulos.",
+          "Sirva imediatamente ou leve à geladeira."
+        ],
+        save: "✨ Salve isso — chá da tarde sem complicação!"
+      },
+      ja: {
+        title: "🥒 5分で作るきゅうりサンド（火を使わない）",
+        desc: "さわやかで上品、意外とボリュームあり — 最強の手抜きスナック。",
+        need: "👨‍🍳 用意するもの：",
+        how: "📍 作り方：",
+        ingredients: [
+          "白パン 2枚（耳なし）",
+          "クリームチーズまたはバター 大さじ1",
+          "薄切りきゅうり",
+          "塩ひとつまみ",
+          "お好みで：ディルやミント"
+        ],
+        steps: [
+          "パンにチーズやバターを塗る。",
+          "きゅうりを均等にのせる。",
+          "塩やハーブをふる。",
+          "パンを閉じて三角形に切る。",
+          "すぐ食べるか、少し冷やす。"
+        ],
+        save: "✨ 保存して — 簡単アフタヌーンティーに！"
+      },
+      ko: {
+        title: "🥒 5분 오이 샌드위치 (요리 없음!)",
+        desc: "상큼하고 고급스럽고 은근히 든든 — 최고의 간편 스낵.",
+        need: "👨‍🍳 준비물:",
+        how: "📍 만드는 법:",
+        ingredients: [
+          "흰빵 2장 (가장자리 제거)",
+          "크림치즈 또는 버터 1큰술",
+          "얇게 썬 오이",
+          "소금 한 꼬집",
+          "선택: 딜이나 민트"
+        ],
+        steps: [
+          "빵에 치즈나 버터를 바르세요.",
+          "오이를 골고루 올리세요.",
+          "소금과 허브를 뿌리세요.",
+          "샌드위치를 덮고 삼각형으로 자르세요.",
+          "바로 먹거나 잠깐 냉장하세요."
+        ],
+        save: "✨ 저장하세요 — 간편한 오후 간식으로 딱!"
+      },
+      zh: {
+        title: "🥒 5分钟黄瓜三明治（无需加热）",
+        desc: "清爽、高级又有饱腹感 — 懒人零食之王！",
+        need: "👨‍🍳 你需要准备：",
+        how: "📍 做法：",
+        ingredients: [
+          "2片白面包（去边）",
+          "1汤匙奶油奶酪或黄油",
+          "薄切黄瓜片",
+          "少许盐",
+          "可选：新鲜莳萝或薄荷"
+        ],
+        steps: [
+          "面包上涂奶酪或黄油。",
+          "铺上黄瓜片。",
+          "撒上盐和香草。",
+          "合上三明治，切成三角形。",
+          "立即食用或稍微冷藏。"
+        ],
+        save: "✨ 收藏这个 — 下午茶就该这么简单！"
+      }
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    const t = translations[lang];
+    if (t) {
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("desc").textContent = t.desc;
+      document.getElementById("need").textContent = t.need;
+      document.getElementById("how").textContent = t.how;
+      document.getElementById("save").textContent = t.save;
+      document.getElementById("ingredients").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("steps").innerHTML = t.steps.map(s => `<li>${s}</li>`).join("");
+    }
+  </script>
+</body>
+</html>

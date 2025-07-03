@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>10-Minute Egg Fried Rice</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("logoRice.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.75);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="emoji" id="title">🍳 10-Minute Egg Fried Rice</h1>
+    <p id="desc">Leftovers never tasted so good — fast, cheap & way better than takeout!</p>
+    <p><strong id="need">👨‍🍳 You’ll need:</strong></p>
+    <header>
+      <img src="logoRice.png" alt="Tasty & Lifehacky Logo"
+           style="width: 40%; display: block; margin: 0 auto;" />
+    </header>	
+    <ul id="ingredients">
+      <li>1 cup cooked cold rice</li>
+      <li>2 eggs</li>
+      <li>1 tbsp soy sauce</li>
+      <li>1 tsp sesame oil (optional)</li>
+      <li>2 tbsp chopped vegetables (frozen peas, carrots, etc.)</li>
+      <li>Green onion (for garnish)</li>
+    </ul>
+    <p><strong id="how">📍 How to make it:</strong></p>
+    <ol id="steps">
+      <li>Beat the eggs and fry in a pan. Set aside.</li>
+      <li>Add veggies, sauté 2 minutes.</li>
+      <li>Stir in rice, soy sauce, and sesame oil.</li>
+      <li>Return eggs, mix everything well.</li>
+      <li>Garnish with green onion and serve hot!</li>
+    </ol>
+    <p class="emoji" id="save">✨ Save this daily lifesaver — it’s your go-to meal in minutes!</p>
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "🍳 Жареный рис с яйцом за 10 минут",
+        desc: "Остатки еды ещё никогда не были такими вкусными — быстро, дёшево и лучше, чем на вынос!",
+        need: "👨‍🍳 Вам понадобится:",
+        how: "📍 Как готовить:",
+        ingredients: [
+          "1 чашка готового холодного риса",
+          "2 яйца",
+          "1 ст. л. соевого соуса",
+          "1 ч. л. кунжутного масла (по желанию)",
+          "2 ст. л. мелко нарезанных овощей (замороженный горошек, морковь и т. д.)",
+          "Зелёный лук (для украшения)"
+        ],
+        steps: [
+          "Взбейте яйца и обжарьте на сковороде. Отложите.",
+          "Добавьте овощи и обжаривайте 2 минуты.",
+          "Всыпьте рис, соевый соус и кунжутное масло.",
+          "Верните яйца, всё перемешайте.",
+          "Украсьте зелёным луком и подавайте горячим!"
+        ],
+        save: "✨ Сохраните — это ваш рецепт-спасение на каждый день!"
+      },
+      // остальные переводы будут добавлены ниже
+    };
+
+    const fullTranslations = {
+      ...translations,
+      de: {
+        title: "🍳 Gebratener Reis mit Ei in 10 Minuten",
+        desc: "Reste waren noch nie so lecker – schnell, günstig und besser als Takeout!",
+        need: "👨‍🍳 Du brauchst:",
+        how: "📍 So geht's:",
+        ingredients: [
+          "1 Tasse gekochter kalter Reis",
+          "2 Eier",
+          "1 EL Sojasauce",
+          "1 TL Sesamöl (optional)",
+          "2 EL gehacktes Gemüse (Erbsen, Karotten etc.)",
+          "Frühlingszwiebeln (zum Garnieren)"
+        ],
+        steps: [
+          "Eier verquirlen und braten. Beiseitestellen.",
+          "Gemüse anbraten, ca. 2 Min.",
+          "Reis, Sojasauce und Sesamöl dazugeben.",
+          "Eier zurückgeben, gut umrühren.",
+          "Mit Frühlingszwiebeln garnieren und servieren."
+        ],
+        save: "✨ Speichern — dein Rettungsrezept für jeden Tag!"
+      },
+      fr: {
+        title: "🍳 Riz sauté aux œufs en 10 minutes",
+        desc: "Les restes n'ont jamais été aussi bons — rapide, économique et meilleur que les plats à emporter !",
+        need: "👨‍🍳 Il te faut :",
+        how: "📍 Préparation :",
+        ingredients: [
+          "1 tasse de riz froid cuit",
+          "2 œufs",
+          "1 c. à s. de sauce soja",
+          "1 c. à c. d'huile de sésame (optionnel)",
+          "2 c. à s. de légumes hachés (petits pois, carottes, etc.)",
+          "Oignons verts (pour décorer)"
+        ],
+        steps: [
+          "Battre les œufs et les cuire. Réserver.",
+          "Faire sauter les légumes 2 min.",
+          "Ajouter le riz, la sauce soja et l'huile.",
+          "Remettre les œufs, bien mélanger.",
+          "Décorer avec les oignons verts et servir chaud."
+        ],
+        save: "✨ Sauvegarde ce plat express — un indispensable du quotidien !"
+      },
+      es: {
+        title: "🍳 Arroz frito con huevo en 10 minutos",
+        desc: "¡Las sobras nunca supieron tan bien! Rápido, barato y mejor que para llevar.",
+        need: "👨‍🍳 Necesitas:",
+        how: "📍 Preparación:",
+        ingredients: [
+          "1 taza de arroz cocido frío",
+          "2 huevos",
+          "1 cda de salsa de soja",
+          "1 cdta de aceite de sésamo (opcional)",
+          "2 cdas de verduras picadas (guisantes, zanahorias, etc.)",
+          "Cebollín (para decorar)"
+        ],
+        steps: [
+          "Batir los huevos y freírlos. Reservar.",
+          "Sofreír las verduras 2 minutos.",
+          "Agregar arroz, salsa de soja y aceite.",
+          "Añadir los huevos y mezclar todo.",
+          "Decorar con cebollín y servir caliente."
+        ],
+        save: "✨ ¡Guárdalo — tu receta salvadora diaria!"
+      },
+      it: {
+        title: "🍳 Riso fritto con uova in 10 minuti",
+        desc: "Gli avanzi non sono mai stati così buoni — veloce, economico e meglio del take-away!",
+        need: "👨‍🍳 Ti serve:",
+        how: "📍 Preparazione:",
+        ingredients: [
+          "1 tazza di riso cotto freddo",
+          "2 uova",
+          "1 cucchiaio di salsa di soia",
+          "1 cucchiaino di olio di sesamo (facoltativo)",
+          "2 cucchiai di verdure tritate (piselli, carote, ecc.)",
+          "Cipollotto (per guarnire)"
+        ],
+        steps: [
+          "Sbatti le uova e friggile. Metti da parte.",
+          "Soffriggi le verdure per 2 minuti.",
+          "Aggiungi il riso, la salsa e l'olio.",
+          "Unisci le uova, mescola bene.",
+          "Guarnisci con cipollotto e servi caldo."
+        ],
+        save: "✨ Salva questa ricetta — un must quotidiano!"
+      },
+      pt: {
+        title: "🍳 Arroz frito com ovo em 10 minutos",
+        desc: "Sobra nunca foi tão gostosa — rápido, barato e melhor que delivery!",
+        need: "👨‍🍳 Você vai precisar de:",
+        how: "📍 Modo de preparo:",
+        ingredients: [
+          "1 xícara de arroz cozido frio",
+          "2 ovos",
+          "1 colher de sopa de molho de soja",
+          "1 colher de chá de óleo de gergelim (opcional)",
+          "2 colheres de sopa de legumes picados (ervilhas, cenouras, etc.)",
+          "Cebolinha (para decorar)"
+        ],
+        steps: [
+          "Bata os ovos e frite. Reserve.",
+          "Refogue os legumes por 2 minutos.",
+          "Adicione arroz, molho e óleo.",
+          "Volte os ovos, misture tudo.",
+          "Decore com cebolinha e sirva quente."
+        ],
+        save: "✨ Salve essa receita — solução rápida do dia a dia!"
+      },
+      ja: {
+        title: "🍳 卵チャーハン（10分）",
+        desc: "残りご飯がここまで美味しいとは！早い・安い・出前よりうまい！",
+        need: "👨‍🍳 用意するもの：",
+        how: "📍 作り方：",
+        ingredients: [
+          "ご飯1杯（冷たいもの）",
+          "卵2個",
+          "醤油 大さじ1",
+          "ごま油 小さじ1（お好みで）",
+          "みじん切り野菜 大さじ2（グリーンピース、にんじん等）",
+          "青ねぎ（飾り用）"
+        ],
+        steps: [
+          "卵を溶き、炒めて取り出す。",
+          "野菜を2分炒める。",
+          "ご飯、醤油、ごま油を加える。",
+          "卵を戻し、よく混ぜる。",
+          "青ねぎを飾り、熱々でどうぞ！"
+        ],
+        save: "✨ この神レシピを保存しよう！毎日の救世主！"
+      },
+      ko: {
+        title: "🍳 계란 볶음밥 10분 레시피",
+        desc: "남은 밥이 이렇게 맛있을 수 있다니! 빠르고 저렴하며 배달보다 맛있어요!",
+        need: "👨‍🍳 준비물:",
+        how: "📍 만드는 방법:",
+        ingredients: [
+          "밥 1컵 (찬밥)",
+          "계란 2개",
+          "간장 1큰술",
+          "참기름 1작은술 (선택)",
+          "다진 야채 2큰술 (완두콩, 당근 등)",
+          "쪽파 (장식용)"
+        ],
+        steps: [
+          "계란을 풀어 볶고 따로 둡니다.",
+          "야채를 2분간 볶습니다.",
+          "밥, 간장, 참기름을 넣고 섞습니다.",
+          "계란을 다시 넣고 섞습니다.",
+          "쪽파로 장식하고 따뜻하게 먹어요!"
+        ],
+        save: "✨ 매일 쓸 수 있는 레시피 — 저장하세요!"
+      },
+      zh: {
+        title: "🍳 10分钟鸡蛋炒饭",
+        desc: "剩饭也能变美味！快速、便宜，比外卖还好吃！",
+        need: "👨‍🍳 所需材料：",
+        how: "📍 做法：",
+        ingredients: [
+          "1杯冷饭",
+          "2个鸡蛋",
+          "1汤匙酱油",
+          "1茶匙芝麻油（可选）",
+          "2汤匙蔬菜丁（豌豆、胡萝卜等）",
+          "葱花（装饰用）"
+        ],
+        steps: [
+          "打散鸡蛋炒熟，盛出。",
+          "炒蔬菜2分钟。",
+          "加入米饭、酱油和芝麻油翻炒。",
+          "倒回鸡蛋，混合均匀。",
+          "撒上葱花，热食即可！"
+        ],
+        save: "✨ 收藏这个日常救星食谱吧！"
+      }
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    const t = fullTranslations[lang];
+    if (t) {
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("desc").textContent = t.desc;
+      document.getElementById("need").textContent = t.need;
+      document.getElementById("how").textContent = t.how;
+      document.getElementById("save").textContent = t.save;
+      document.getElementById("ingredients").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("steps").innerHTML = t.steps.map(s => `<li>${s}</li>`).join("");
+    }
+  </script>
+</body>
+</html>
