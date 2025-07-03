@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>10-Min Tortilla Pizzas</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: url("(Pizzas.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="emoji" id="title">🍕 10-Min Tortilla Pizzas (Air Fryer or Oven!)</h1>
+    <p id="desc">Crispy, quick, and fully customizable — pizza night just leveled up.</p>
+    <p><strong id="need">👨‍🍳 You’ll need:</strong></p>
+    <ul id="ingredients">
+      <li>1 flour tortilla</li>
+      <li>2 tbsp tomato sauce or pizza sauce</li>
+      <li>½ cup shredded cheese</li>
+      <li>Your favorite toppings (pepperoni, mushrooms, peppers, olives…)</li>
+    </ul>
+
+    <p><strong id="how">📍 How to make it:</strong></p>
+    <header>
+      <img src="logoPizzas.png" alt="Tasty & Lifehacky Logo"
+           style="width: 40%; display: block; margin: 0 auto;" />
+    </header>	
+    <ol id="steps">
+      <li>Preheat oven to 200°C (400°F) or air fryer to 180°C (350°F).</li>
+      <li>Place tortilla on baking sheet or in fryer basket.</li>
+      <li>Spread sauce, sprinkle cheese, add toppings.</li>
+      <li>Bake or air-fry for 5–7 minutes, until golden & bubbly.</li>
+      <li>Slice and enjoy immediately!</li>
+    </ol>
+
+    <p class="emoji" id="save">✨ Save this — it’s your new last-minute lifesaver.</p>
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "🍕 Тортилья-пицца за 10 минут (духовка или аэрогриль!)",
+        desc: "Хрустящая, быстрая и как хочешь — вечер пиццы на новом уровне.",
+        need: "👨‍🍳 Вам понадобится:",
+        how: "📍 Как готовить:",
+        ingredients: [
+          "1 пшеничная тортилья",
+          "2 ст. л. томатного или пицца-соуса",
+          "½ стакана тертого сыра",
+          "Любимые топпинги (пепперони, грибы, перец, оливки...)"
+        ],
+        steps: [
+          "Разогрейте духовку до 200°C или аэрогриль до 180°C.",
+          "Выложите тортилью на противень или в корзину.",
+          "Намажьте соус, посыпьте сыром, добавьте начинку.",
+          "Выпекайте 5–7 минут до золотистой корочки.",
+          "Нарежьте и ешьте сразу!"
+        ],
+        save: "✨ Сохраните — ваш спаситель в последний момент!"
+      },
+      de: {
+        title: "🍕 10-Minuten-Tortilla-Pizza (Ofen oder Airfryer!)",
+        desc: "Knusprig, schnell & ganz nach deinem Geschmack – Pizzaabend auf neuem Level.",
+        need: "👨‍🍳 Du brauchst:",
+        how: "📍 So geht’s:",
+        ingredients: [
+          "1 Weizentortilla",
+          "2 EL Tomaten- oder Pizzasauce",
+          "½ Tasse geriebener Käse",
+          "Deine Lieblingstoppings (Salami, Pilze, Paprika, Oliven...)"
+        ],
+        steps: [
+          "Ofen auf 200°C oder Airfryer auf 180°C vorheizen.",
+          "Tortilla auf Backblech oder in Korb legen.",
+          "Sauce verteilen, Käse streuen, Toppings drauf.",
+          "5–7 Minuten backen, bis goldbraun und blubbernd.",
+          "Sofort servieren und genießen!"
+        ],
+        save: "✨ Speichern – perfekt für spontane Pizzaabende!"
+      },
+      fr: {
+        title: "🍕 Pizzas tortillas en 10 min (four ou air fryer !)",
+        desc: "Croustillantes, rapides et personnalisables — la soirée pizza monte d’un cran.",
+        need: "👨‍🍳 Il te faut :",
+        how: "📍 Préparation :",
+        ingredients: [
+          "1 tortilla de blé",
+          "2 c. à s. de sauce tomate ou pizza",
+          "½ tasse de fromage râpé",
+          "Tes garnitures préférées (pepperoni, champignons, poivrons, olives...)"
+        ],
+        steps: [
+          "Préchauffe le four à 200°C ou l’air fryer à 180°C.",
+          "Place la tortilla sur une plaque ou panier.",
+          "Étale la sauce, ajoute fromage et garnitures.",
+          "Fais cuire 5–7 min jusqu’à doré et fondant.",
+          "Coupe et savoure immédiatement !"
+        ],
+        save: "✨ Garde ça — ton sauveur de dernière minute !"
+      },
+      es: {
+        title: "🍕 Pizzas de tortilla en 10 minutos (horno o freidora)",
+        desc: "Crujientes, rápidas y a tu gusto — la noche de pizza mejoró.",
+        need: "👨‍🍳 Necesitas:",
+        how: "📍 Preparación:",
+        ingredients: [
+          "1 tortilla de harina",
+          "2 cdas de salsa de tomate o para pizza",
+          "½ taza de queso rallado",
+          "Tus toppings favoritos (pepperoni, champiñones, pimientos, aceitunas...)"
+        ],
+        steps: [
+          "Precalienta horno a 200°C o freidora a 180°C.",
+          "Coloca tortilla en bandeja o cesta.",
+          "Unta salsa, espolvorea queso y añade toppings.",
+          "Hornea 5–7 min hasta dorada y burbujeante.",
+          "Corta y disfruta al momento."
+        ],
+        save: "✨ Guarda esto — tu salvación exprés."
+      },
+      it: {
+        title: "🍕 Pizza con tortilla in 10 minuti (forno o friggitrice ad aria!)",
+        desc: "Croccante, veloce e personalizzabile — è arrivata la serata pizza 2.0.",
+        need: "👨‍🍳 Ti serve:",
+        how: "📍 Procedimento:",
+        ingredients: [
+          "1 tortilla di farina",
+          "2 cucchiai di salsa di pomodoro o pizza",
+          "½ tazza di formaggio grattugiato",
+          "I tuoi condimenti preferiti (salame, funghi, peperoni, olive...)"
+        ],
+        steps: [
+          "Preriscalda forno a 200°C o air fryer a 180°C.",
+          "Metti la tortilla sulla teglia o nel cestello.",
+          "Spalma salsa, aggiungi formaggio e topping.",
+          "Cuoci 5–7 min fino a doratura e scioglievolezza.",
+          "Taglia e gusta subito!"
+        ],
+        save: "✨ Salvalo — il tuo nuovo eroe last minute!"
+      },
+      pt: {
+        title: "🍕 Pizza de tortilla em 10 minutos (forno ou air fryer!)",
+        desc: "Crocrante, rápida e personalizável — noite de pizza nivelada.",
+        need: "👨‍🍳 Você vai precisar de:",
+        how: "📍 Como fazer:",
+        ingredients: [
+          "1 tortilla de farinha",
+          "2 colheres de sopa de molho de tomate ou pizza",
+          "½ xícara de queijo ralado",
+          "Coberturas favoritas (pepperoni, cogumelos, pimentões, azeitonas...)"
+        ],
+        steps: [
+          "Pré-aqueça o forno a 200°C ou air fryer a 180°C.",
+          "Coloque a tortilla em assadeira ou cesta.",
+          "Espalhe molho, queijo e toppings.",
+          "Asse por 5–7 min até dourar.",
+          "Corte e aproveite imediatamente!"
+        ],
+        save: "✨ Salve isso — é seu salvador de emergência!"
+      },
+      ja: {
+        title: "🍕 10分トルティーヤピザ（オーブンまたはエアフライヤー）",
+        desc: "カリッと速攻、自分好みに — ピザナイトが進化！",
+        need: "👨‍🍳 用意するもの：",
+        how: "📍 作り方：",
+        ingredients: [
+          "小麦のトルティーヤ 1枚",
+          "ピザソース 大さじ2",
+          "チーズ ½カップ（おろしたもの）",
+          "お好みの具材（サラミ、きのこ、ピーマン、オリーブなど）"
+        ],
+        steps: [
+          "オーブンは200°C、エアフライヤーは180°Cに予熱。",
+          "トルティーヤを天板またはバスケットにのせる。",
+          "ソースを塗り、チーズと具材をのせる。",
+          "5〜7分焼き、こんがりとろ〜りに。",
+          "カットしてすぐに食べよう！"
+        ],
+        save: "✨ 保存して — 急ぎの夜の救世主！"
+      },
+      ko: {
+        title: "🍕 10분 또띠아 피자 (에어프라이어/오븐)",
+        desc: "바삭하고 빠르며 원하는 대로 — 피자 밤 레벨 업!",
+        need: "👨‍🍳 준비물:",
+        how: "📍 만드는 법:",
+        ingredients: [
+          "또띠아 1장",
+          "토마토 또는 피자 소스 2큰술",
+          "치즈 ½컵",
+          "좋아하는 토핑 (페퍼로니, 버섯, 피망, 올리브 등)"
+        ],
+        steps: [
+          "오븐은 200°C, 에어프라이어는 180°C로 예열.",
+          "또띠아를 팬 또는 바구니에 놓기.",
+          "소스 바르고 치즈와 토핑 추가.",
+          "5–7분 굽기, 노릇하고 보글보글할 때까지.",
+          "조각내어 바로 먹기!"
+        ],
+        save: "✨ 저장하세요 — 긴급 피자 히어로 등장!"
+      },
+      zh: {
+        title: "🍕 10分钟玉米饼披萨（空气炸锅或烤箱）",
+        desc: "酥脆、快捷、随心所欲 — 披萨夜更上一层楼。",
+        need: "👨‍🍳 你需要准备：",
+        how: "📍 做法：",
+        ingredients: [
+          "1张面粉玉米饼",
+          "2汤匙番茄酱或披萨酱",
+          "½杯碎芝士",
+          "你喜欢的配料（香肠、蘑菇、辣椒、橄榄等）"
+        ],
+        steps: [
+          "预热烤箱至200°C或空气炸锅至180°C。",
+          "将玉米饼放在烤盘或炸篮中。",
+          "抹酱、撒芝士、放配料。",
+          "烤/炸5–7分钟，至金黄起泡。",
+          "切片即享！"
+        ],
+        save: "✨ 收藏这个 — 你的应急披萨神器！"
+      }
+    };
+
+    const lang = (navigator.language || navigator.userLanguage || "en").slice(0, 2);
+    const t = translations[lang];
+    if (t) {
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("desc").textContent = t.desc;
+      document.getElementById("need").textContent = t.need;
+      document.getElementById("how").textContent = t.how;
+      document.getElementById("save").textContent = t.save;
+      document.getElementById("ingredients").innerHTML = t.ingredients.map(i => `<li>${i}</li>`).join("");
+      document.getElementById("steps").innerHTML = t.steps.map(s => `<li>${s}</li>`).join("");
+    }
+  </script>
+</body>
+</html>
