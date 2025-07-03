@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Microwave Omelette Recipe</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #fff8f0;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="microwave-omelette.jpg" alt="Microwave Omelette" />
+    <h1 id="title" class="emoji">🥚 Microwave Omelette</h1>
+    <p id="intro">
+      <strong>Breakfast in 3 minutes — in one mug, with zero dishes!</strong><br>
+      Perfect for busy mornings, dorm life, or when your kitchen says “nope.”
+    </p>
+    <p id="ingredients" class="emoji">👨‍🍳 <strong>You’ll need:</strong><br>2 eggs, splash of milk, salt, pepper, toppings (cheese, herbs, veggies — go wild!)</p>
+    <p id="instructions-title" class="emoji">📍 <strong>How to make it:</strong></p>
+    <ol>
+      <li id="step1">Crack eggs into a mug. Add milk, salt, pepper.</li>
+      <li id="step2">Stir like you mean it.</li>
+      <li id="step3">Add your favorite fillings.</li>
+      <li id="step4">Microwave 1 min → stir → microwave 1 more min.</li>
+    </ol>
+    <p id="finish">Done. Fluff with a fork and eat straight from the mug!</p>
+    <p id="tip" class="emoji">✨ <em>Save for later — your future self will thank you.</em></p>
+  </div>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "🥚 Омлет в микроволновке",
+        intro: "<strong>Завтрак за 3 минуты — в одной кружке и без грязной посуды!</strong><br>Идеально для спешки, общежития или лени.",
+        ingredients: "👨‍🍳 <strong>Вам понадобится:</strong><br>2 яйца, немного молока, соль, перец, начинка (сыр, зелень, овощи — по вкусу!)",
+        "instructions-title": "📍 <strong>Как приготовить:</strong>",
+        step1: "Разбейте яйца в кружку. Добавьте молоко, соль и перец.",
+        step2: "Хорошенько размешайте.",
+        step3: "Добавьте любимую начинку.",
+        step4: "1 мин в микроволновке → размешайте → ещё 1 мин в микроволновке.",
+        finish: "Готово. Взбейте вилкой и ешьте прямо из кружки!",
+        tip: "✨ <em>Сохраните — вы себе ещё спасибо скажете.</em>"
+      },
+      de: {
+        title: "🥚 Mikrowellen-Omelett",
+        intro: "<strong>Frühstück in 3 Minuten — in einer Tasse, ohne Abwasch!</strong><br>Perfekt für hektische Morgen, Studentenleben oder faule Tage.",
+        ingredients: "👨‍🍳 <strong>Du brauchst:</strong><br>2 Eier, etwas Milch, Salz, Pfeffer, Belag (Käse, Kräuter, Gemüse — ganz nach Geschmack!)",
+        "instructions-title": "📍 <strong>Zubereitung:</strong>",
+        step1: "Eier in eine Tasse aufschlagen. Milch, Salz und Pfeffer hinzufügen.",
+        step2: "Kräftig umrühren.",
+        step3: "Lieblingszutaten hinzufügen.",
+        step4: "1 Min Mikrowelle → umrühren → weitere 1 Min Mikrowelle.",
+        finish: "Fertig. Mit der Gabel auflockern und direkt aus der Tasse essen!",
+        tip: "✨ <em>Für später speichern – du wirst es dir danken!</em>"
+      },
+      fr: {
+        title: "🥚 Omelette au micro-ondes",
+        intro: "<strong>Petit-déj en 3 min — dans une tasse, sans vaisselle !</strong><br>Parfait pour les matins pressés, la vie en dortoir ou la flemme.",
+        ingredients: "👨‍🍳 <strong>Ingrédients :</strong><br>2 œufs, un peu de lait, sel, poivre, garniture (fromage, herbes, légumes — à votre goût !)",
+        "instructions-title": "📍 <strong>Préparation :</strong>",
+        step1: "Cassez les œufs dans une tasse. Ajoutez lait, sel, poivre.",
+        step2: "Mélangez bien.",
+        step3: "Ajoutez vos garnitures préférées.",
+        step4: "1 min au micro-ondes → remuez → encore 1 min.",
+        finish: "C’est prêt. Mélangez à la fourchette et dégustez dans la tasse !",
+        tip: "✨ <em>Enregistrez — votre futur vous vous dira merci.</em>"
+      },
+      es: {
+        title: "🥚 Tortilla al microondas",
+        intro: "<strong>Desayuno en 3 minutos — ¡en una taza y sin platos sucios!</strong><br>Perfecto para mañanas ocupadas o sin cocina.",
+        ingredients: "👨‍🍳 <strong>Necesitarás:</strong><br>2 huevos, un chorrito de leche, sal, pimienta, ingredientes extra (queso, hierbas, verduras).",
+        "instructions-title": "📍 <strong>Cómo hacerlo:</strong>",
+        step1: "Rompe los huevos en una taza. Añade leche, sal, pimienta.",
+        step2: "Remueve con energía.",
+        step3: "Añade tus ingredientes favoritos.",
+        step4: "Microondas 1 min → remueve → 1 min más.",
+        finish: "Listo. Esponja con un tenedor y ¡come directamente de la taza!",
+        tip: "✨ <em>Guárdalo — tu yo del futuro te lo agradecerá.</em>"
+      },
+      it: {
+        title: "🥚 Omelette al microonde",
+        intro: "<strong>Colazione in 3 minuti — in una tazza, senza sporcare nulla!</strong><br>Perfetta per le mattine frenetiche o la vita da studente.",
+        ingredients: "👨‍🍳 <strong>Ti serviranno:</strong><br>2 uova, un po’ di latte, sale, pepe, condimenti (formaggio, erbe, verdure — a piacere!)",
+        "instructions-title": "📍 <strong>Preparazione:</strong>",
+        step1: "Rompi le uova in una tazza. Aggiungi latte, sale e pepe.",
+        step2: "Mescola energicamente.",
+        step3: "Aggiungi i tuoi ingredienti preferiti.",
+        step4: "Microonde 1 min → mescola → altri 1 min.",
+        finish: "Pronto. Sbatti con la forchetta e gusta dalla tazza!",
+        tip: "✨ <em>Salvalo — il tuo io futuro ti ringrazierà.</em>"
+      },
+      pt: {
+        title: "🥚 Omelete de micro-ondas",
+        intro: "<strong>Café da manhã em 3 minutos — em uma caneca, sem louça!</strong><br>Perfeito para manhãs corridas, estudantes ou preguiçosos.",
+        ingredients: "👨‍🍳 <strong>Você vai precisar de:</strong><br>2 ovos, um pouco de leite, sal, pimenta, recheios (queijo, ervas, legumes — como quiser!)",
+        "instructions-title": "📍 <strong>Como fazer:</strong>",
+        step1: "Quebre os ovos em uma caneca. Adicione leite, sal e pimenta.",
+        step2: "Misture bem.",
+        step3: "Adicione os recheios favoritos.",
+        step4: "Micro-ondas 1 min → misture → mais 1 min.",
+        finish: "Pronto. Mexa com um garfo e coma direto da caneca!",
+        tip: "✨ <em>Salve para depois — seu futuro eu vai agradecer.</em>"
+      },
+      ja: {
+        title: "🥚 電子レンジでオムレツ",
+        intro: "<strong>3分で朝ごはん — マグカップ1つ、洗い物ゼロ！</strong><br>忙しい朝や寮生活、キッチンが面倒なときに最適。",
+        ingredients: "👨‍🍳 <strong>材料：</strong><br>卵2個、牛乳少し、塩、こしょう、お好みの具材（チーズ、ハーブ、野菜など）",
+        "instructions-title": "📍 <strong>作り方：</strong>",
+        step1: "マグに卵を割り入れ、牛乳、塩、こしょうを加える。",
+        step2: "しっかり混ぜる。",
+        step3: "好きな具材を入れる。",
+        step4: "電子レンジで1分 → 混ぜる → もう1分加熱。",
+        finish: "完成。フォークでふわっとさせて、そのまま食べよう！",
+        tip: "✨ <em>保存してね — 未来の自分が感謝するよ。</em>"
+      },
+      ko: {
+        title: "🥚 전자레인지 오믈렛",
+        intro: "<strong>3분 아침 — 머그컵 하나, 설거지 필요 없음!</strong><br>바쁜 아침, 기숙사 생활 또는 귀찮을 때 완벽해요.",
+        ingredients: "👨‍🍳 <strong>준비물:</strong><br>달걀 2개, 우유 약간, 소금, 후추, 토핑(치즈, 허브, 야채 등 자유롭게!)",
+        "instructions-title": "📍 <strong>만드는 방법:</strong>",
+        step1: "머그컵에 계란을 깨고, 우유, 소금, 후추를 넣어요.",
+        step2: "열심히 저어요.",
+        step3: "좋아하는 재료를 추가해요.",
+        step4: "전자레인지 1분 → 저어주기 → 1분 더 돌리기.",
+        finish: "완성! 포크로 fluff하고 바로 드세요.",
+        tip: "✨ <em>저장해 두세요 — 미래의 내가 고마워할 거예요.</em>"
+      },
+      zh: {
+        title: "🥚 微波炉鸡蛋饼",
+        intro: "<strong>3分钟早餐 — 一杯搞定，零碗盘！</strong><br>适合忙碌的早晨、宿舍生活或厨房不想开火的时候。",
+        ingredients: "👨‍🍳 <strong>你需要：</strong><br>2个鸡蛋，一点牛奶，盐、胡椒，配料（奶酪、香草、蔬菜，随意加！）",
+        "instructions-title": "📍 <strong>制作方法：</strong>",
+        step1: "将鸡蛋打入杯中，加入牛奶、盐和胡椒。",
+        step2: "充分搅拌。",
+        step3: "加入你喜欢的配料。",
+        step4: "微波炉加热1分钟 → 搅拌 → 再加热1分钟。",
+        finish: "完成！用叉子搅散，直接享用！",
+        tip: "✨ <em>收藏一下 — 未来的你会感谢你的！</em>"
+      }
+    };
+
+    const lang = navigator.language.slice(0, 2);
+    if (translations[lang]) {
+      const t = translations[lang];
+      document.getElementById("title").innerHTML = t.title;
+      document.getElementById("intro").innerHTML = t.intro;
+      document.getElementById("ingredients").innerHTML = t.ingredients;
+      document.getElementById("instructions-title").innerHTML = t["instructions-title"];
+      document.getElementById("step1").innerHTML = t.step1;
+      document.getElementById("step2").innerHTML = t.step2;
+      document.getElementById("step3").innerHTML = t.step3;
+      document.getElementById("step4").innerHTML = t.step4;
+      document.getElementById("finish").innerHTML = t.finish;
+      document.getElementById("tip").innerHTML = t.tip;
+    }
+  </script>
+</body>
+</html>
